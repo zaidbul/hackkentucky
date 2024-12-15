@@ -19,7 +19,7 @@ export function SiteHeader() {
   ]
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
+    <header className="fixed top-0 z-40 w-full bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-foreground">
@@ -47,7 +47,7 @@ export function SiteHeader() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2"
+            className="md:hidden p-2 relative z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -61,8 +61,14 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-background">
-          <div className="container mx-auto px-4 py-8">
+        <div className="fixed inset-0 z-45 bg-background/95 backdrop-blur-sm">
+          <div className="container mx-auto px-4 py-8 relative">
+            <button
+              className="absolute top-4 right-4 p-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <X className="h-6 w-6" />
+            </button>
             <nav className="flex flex-col items-center gap-8">
               {navItems.map((item) => (
                 <Link
