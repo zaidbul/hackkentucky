@@ -65,8 +65,8 @@ export function Hero() {
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Button asChild size="lg" className="bg-purple-700 hover:bg-purple-600 text-white dark:bg-purple-600 dark:hover:bg-purple-500 font-semibold">
-            <Link href="https://lu.ma" target="_blank">
-              Apply Now
+            <Link href="https://lu.ma/s9igbhj9" target="_blank">
+              Join Now
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="bg-purple-100 text-purple-900 hover:bg-purple-200 border-purple-300 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:border-white">

@@ -31,8 +31,8 @@ export function SiteHeader() {
             ))}
             <ThemeToggle />
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              <Link href="https://lu.ma" target="_blank">
-                Apply
+              <Link href="https://lu.ma/s9igbhj9" target="_blank">
+                Sign-Up
               </Link>
             </Button>
           </nav>
