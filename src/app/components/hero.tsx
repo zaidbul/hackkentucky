@@ -56,12 +56,15 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 text-center">
          <p className="text-lg md:text-xl mb-2 text-purple-900 dark:text-purple-300">KYCombinator x Story</p>
         <h1 className="text-7xl md:text-9xl font-bold mb-6 tracking-tighter text-purple-900 dark:text-white glow">
-          Hack-a-thon
+          Hack Kentucky
           <br />
           <span className="text-purple-500 dark:text-purple-300">2025</span>
         </h1>
-        <p className="text-3xl md:text-4xl text-purple-900 dark:text-white mb-12 glow">
+        <p className="text-3xl md:text-4xl text-purple-900 dark:text-white mb-4 glow">
           02.21 - 02.23
+        </p>
+        <p className="text-xl md:text-2xl text-purple-900 dark:text-white mb-12">
+          Story, 828 East Market Street, Louisville, KY
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Button asChild size="lg" className="bg-purple-700 hover:bg-purple-600 text-white dark:bg-purple-600 dark:hover:bg-purple-500 font-semibold">
