@@ -61,7 +61,7 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-45 bg-background/95 backdrop-blur-sm">
+        <div className="fixed inset-0 z-45 bg-background">
           <div className="container mx-auto px-4 py-8 relative">
             <button
               className="absolute top-4 right-4 p-2"
@@ -69,7 +69,7 @@ export function SiteHeader() {
             >
               <X className="h-6 w-6" />
             </button>
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="flex flex-col items-center gap-8 pt-16">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
