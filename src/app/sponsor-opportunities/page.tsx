@@ -37,7 +37,7 @@ export default function SponsorOpportunities() {
             Empower the Next Generation<br />of Tech Innovation
           </h1>
           <p className="text-xl md:text-2xl text-purple-800 dark:text-purple-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Join Kentucky's premier hackathon as a sponsor and help shape the future of technology while connecting with top talent
+            Join Kentucky&apos;s premier hackathon as a sponsor and help shape the future of technology while connecting with top talent
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
