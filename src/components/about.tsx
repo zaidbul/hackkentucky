@@ -4,7 +4,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center">About KYCombinator</h2>
         <p className="text-lg mb-6 text-center max-w-3xl mx-auto">
-          KYCombinator is Kentucky's premier hackathon, bringing together the brightest minds in technology and innovation. Join us for 48 hours of coding, creativity, and collaboration!
+          KYCombinator is Kentucky&apos;s premier hackathon, bringing together the brightest minds in technology and innovation. Join us for 48 hours of coding, creativity, and collaboration!
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
