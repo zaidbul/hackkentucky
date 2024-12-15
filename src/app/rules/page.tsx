@@ -1,5 +1,5 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { Rules } from "@/app/components/rules"
+import { SiteHeader } from "@/components/site-header"
+import { Rules } from "@/components/rules"
 
 export default function RulesPage() {
   return (

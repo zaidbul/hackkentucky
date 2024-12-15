@@ -1,5 +1,5 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { Schedule } from "@/app/components/schedule"
+import { SiteHeader } from "@/components/site-header"
+import { Schedule } from "@/components/schedule"
 
 export default function SchedulePage() {
   return (

@@ -1,5 +1,5 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { About } from "@/app/components/about"
+import { SiteHeader } from "@/components/site-header"
+import { About } from "@/components/about"
 
 export default function AboutPage() {
   return (

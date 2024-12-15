@@ -1,5 +1,5 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { Sponsors } from "@/app/components/sponsors"
+import { SiteHeader } from "@/components/site-header"
+import { Sponsors } from "@/components/sponsors"
 
 export default function SponsorsPage() {
   return (

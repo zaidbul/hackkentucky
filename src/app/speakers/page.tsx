@@ -1,5 +1,5 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { Speakers } from "@/app/components/speakers"
+import { SiteHeader } from "@/components/site-header"
+import { Speakers } from "@/components/speakers"
 
 export default function SpeakersPage() {
   return (

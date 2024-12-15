@@ -1,10 +1,10 @@
-import { SiteHeader } from "@/app/components/site-header"
-import { Hero } from "@/app/components/hero"
-import { About } from "@/app/components/about"
-import { Schedule } from "@/app/components/schedule"
-import { Speakers } from "@/app/components/speakers"
-import { Sponsors } from "@/app/components/sponsors"
-import { Rules } from "@/app/components/rules"
+import { SiteHeader } from "@/components/site-header"
+import { Hero } from "@/components/hero"
+import { About } from "@/components/about"
+import { Schedule } from "@/components/schedule"
+import { Speakers } from "@/components/speakers"
+import { Sponsors } from "@/components/sponsors"
+import { Rules } from "@/components/rules"
 
 export default function Page() {
   return (
