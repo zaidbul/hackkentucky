@@ -54,7 +54,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-         <p className="text-lg md:text-xl mb-2 text-purple-900 dark:text-purple-300">KYCombinator</p>
+         <p className="text-lg md:text-xl mb-2 text-purple-900 dark:text-purple-300">KYCombinator x Story</p>
         <h1 className="text-7xl md:text-9xl font-bold mb-6 tracking-tighter text-purple-900 dark:text-white glow">
           Hack-a-thon
           <br />
