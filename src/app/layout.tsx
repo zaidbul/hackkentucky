@@ -12,6 +12,9 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "KYCombinator Hackathon 2025",
   description: "Kentucky's Premier Hackathon Event",
+  openGraph: {
+    images: ['/hackkentuckyposter.jpg'],
+  },
 }
 
 export default function RootLayout({
