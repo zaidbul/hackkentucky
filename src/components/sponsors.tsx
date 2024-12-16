@@ -28,7 +28,15 @@ export function Sponsors() {
           {sponsors.map((sponsor, index) => (
             <div key={index} className="text-center">
               <SponsorImage src={sponsor.logo} alt={sponsor.name} size={180} />
-              <h4 className="text-xl font-semibold mb-2">{sponsor.name}</h4>
+              <h4 className="text-xl font-semibold mb-2">
+                {sponsor.website ? (
+                  <Link href={sponsor.website} className="hover:text-purple-600 dark:hover:text-purple-400">
+                    {sponsor.name}
+                  </Link>
+                ) : (
+                  sponsor.name
+                )}
+              </h4>
               <span className="inline-block px-4 py-1 bg-purple-100 dark:bg-purple-800 rounded-full text-purple-700 dark:text-purple-200 text-sm font-medium">
                 {sponsor.tier}
               </span>
