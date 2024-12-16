@@ -8,12 +8,34 @@ import { SiteFooter } from "@/components/site-footer"
 import { TechBackground } from "@/components/tech-background"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
-
 export const metadata: Metadata = {
-  title: "KYCombinator Hackathon 2025",
-  description: "Kentucky's Premier Hackathon Event",
+  title: "Hack Kentucky 2025",
+  description: "Kentucky's Premier Hackathon Event - Join us for 48 hours of coding, learning, and building with top tech companies",
+  keywords: ["hackathon", "kentucky", "programming", "coding", "tech", "students"],
+  authors: [{ name: "KYCombinator" }],
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://hackkentucky.com",
+    siteName: "Hack Kentucky 2025",
+    title: "Hack Kentucky 2025",
+    description: "Kentucky's Premier Hackathon Event - Join us for 48 hours of coding, learning, and building with top tech companies",
+    images: [{
+      url: '/hackkentuckyposter.jpg',
+      width: 1200,
+      height: 630,
+      alt: "Hack Kentucky 2025"
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hack Kentucky 2025",
+    description: "Kentucky's Premier Hackathon Event",
     images: ['/hackkentuckyposter.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
