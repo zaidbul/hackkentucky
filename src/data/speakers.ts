@@ -40,7 +40,7 @@ export const speakers = [
     role: "Software Development Engineer - Product & Solutions Engineering at AWS",
     image: "/speakers/weseklund.jpg",
     linkedin: "https://www.linkedin.com/in/weseklund/",
-    confirmed: false
+    confirmed: true
   },
   {
     name: "Oliver Ardery",
