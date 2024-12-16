@@ -4,6 +4,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { PageTransition } from "@/components/page-transition"
 import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 import { TechBackground } from "@/components/tech-background"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
@@ -27,6 +28,7 @@ export default function RootLayout({
           <PageTransition>
             {children}
           </PageTransition>
+          <SiteFooter />
         </ThemeProvider>
       </body>
     </html>

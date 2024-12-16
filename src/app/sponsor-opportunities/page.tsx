@@ -56,7 +56,7 @@ export default function SponsorOpportunities() {
               className="border-2 border-purple-600 text-purple-700 dark:text-purple-200 hover:bg-purple-50 dark:hover:bg-purple-800/50 px-8 py-6 text-lg"
               asChild
             >
-              <a href="mailto:sponsor@hackkentucky.com" className="flex items-center gap-2">
+              <a href="mailto:dan@kycombinator.com" className="flex items-center gap-2">
                 <Mail className="w-5 h-5" />
                 <span>Contact Us</span>
               </a>

@@ -1,11 +1,8 @@
 import { sponsors } from '@/data/sponsors'
 import { SponsorImage } from './sponsor-image'
 import Link from 'next/link'
-export function Sponsors() {
-  const partnerSponsors = sponsors.filter(s => s.tier === "Partner")
-  const corporateSponsors = sponsors.filter(s => s.tier === "Corporate")
-  const communitySponsors = sponsors.filter(s => s.tier === "Community")
 
+export function Sponsors() {
   return (
     <section id="sponsors" className="py-20 bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4">
@@ -26,44 +23,17 @@ export function Sponsors() {
             Learn More About Sponsoring →
           </Link>
         </div>
-        
-        {/* Partners */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Partners</h3>
-          <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
-            {partnerSponsors.map((sponsor, index) => (
-              <div key={index} className="text-center">
-                <SponsorImage src={sponsor.logo} alt={sponsor.name} size={200} />
-                <h4 className="text-xl font-semibold">{sponsor.name}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Corporate Sponsors */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Corporate Sponsors</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {corporateSponsors.map((sponsor, index) => (
-              <div key={index} className="text-center">
-                <SponsorImage src={sponsor.logo} alt={sponsor.name} size={150} />
-                <h4 className="text-lg font-semibold">{sponsor.name}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Community Sponsors */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-8 text-center">Community Sponsors</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {communitySponsors.map((sponsor, index) => (
-              <div key={index} className="text-center">
-                <SponsorImage src={sponsor.logo} alt={sponsor.name} size={120} />
-                <h4 className="text-lg font-semibold">{sponsor.name}</h4>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-3 gap-12">
+          {sponsors.map((sponsor, index) => (
+            <div key={index} className="text-center">
+              <SponsorImage src={sponsor.logo} alt={sponsor.name} size={180} />
+              <h4 className="text-xl font-semibold mb-2">{sponsor.name}</h4>
+              <span className="inline-block px-4 py-1 bg-purple-100 dark:bg-purple-800 rounded-full text-purple-700 dark:text-purple-200 text-sm font-medium">
+                {sponsor.tier}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

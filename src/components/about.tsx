@@ -14,7 +14,7 @@ export function About() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">500+ Participants</h3>
-            <p>Students from across the region</p>
+            <p>High school students, college students, and industry professionals from across the region</p>
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">$10,000 in Prizes</h3>

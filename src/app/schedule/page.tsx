@@ -6,16 +6,47 @@ export default function SchedulePage() {
   return (
     <main className="min-h-screen">
       <SiteHeader />
-      <div className="pt-20 bg-gradient-to-b from-purple-300 to-purple-100 dark:from-purple-700 dark:to-purple-900">
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-900 dark:text-white glow">
-            Hackathon Schedule
-          </h1>
-          <p className="text-xl text-purple-800 dark:text-purple-200 glow">
-            Your guide to 48 hours of innovation and excitement
-          </p>
+      <section className="relative py-32 bg-[#1a1a2e] overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" 
+               style={{
+                 backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+                 backgroundSize: '40px 40px'
+               }}
+          />
         </div>
-      </div>
+
+        <div className="container relative mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-6xl font-bold text-white mb-6">
+              Event Schedule
+            </h1>
+            <p className="text-xl leading-relaxed text-gray-300 mb-8">
+              Your complete guide to 48 hours of innovation, learning, and collaboration. 
+              From keynote speeches to workshops, every moment is an opportunity to grow.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-gray-300">
+              <div className="flex items-center">
+                <Clock className="w-6 h-6 mr-2" />
+                <span>48 Hours</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
+                </svg>
+                <span>Multiple Tracks</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                </svg>
+                <span>Expert Sessions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {Object.entries(scheduleItems).map(([day, items]) => (
         <section key={day} className="py-16 bg-white dark:bg-background">
