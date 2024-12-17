@@ -13,5 +13,6 @@ export const sponsors: Sponsor[] = [
   // Community Sponsors
   { name: "Code Louisville", tier: "Community", logo: "/sponsors/codelouisville.png", website: "https://www.codelouisville.org" },
   { name: "Blue North", tier: "Community", logo: "/sponsors/bluenorth.jpg", website: "https://www.bluenorthky.com" },
-  { name: "Sparkhaus", tier: "Community", logo: "/sponsors/sparkhaus.png", website: "https://www.sparkhaus.co" }
+  { name: "Sparkhaus", tier: "Community", logo: "/sponsors/sparkhaus.png", website: "https://www.sparkhaus.co" },
+  { name: "Cintrifuse", tier: "Community", logo: "/sponsors/cintrifuselogo.png", website: "https://www.cintrifuse.com" }
 ]

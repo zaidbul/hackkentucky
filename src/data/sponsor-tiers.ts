@@ -12,7 +12,7 @@ interface SponsorTier {
 export const sponsorTiers: SponsorTier[] = [
   {
     name: "Partner Sponsor",
-    price: "$5,000+",
+    price: "$10,000+",
     slots: "3 slots available",
     description: "You bring the big lift to the event!",
     fundingUses: [
@@ -27,7 +27,7 @@ export const sponsorTiers: SponsorTier[] = [
       "Prominent banner / marketing placement throughout the event",
       "Multiple shout-outs throughout the event"
     ],
-    note: "Above $10K will be given 'Title Sponsor' along with all the above."
+    note: "Above $20K will be given 'Title Sponsor' along with all the above."
   },
   {
     name: "Purple (Bounty) Sponsor",
