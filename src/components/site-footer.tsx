@@ -5,6 +5,7 @@ export function SiteFooter() {
     "Main": [
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
+      { name: "Prizes", href: "/prizes" },
       { name: "Schedule", href: "/schedule" },
       { name: "Speakers", href: "/speakers" },
     ],
