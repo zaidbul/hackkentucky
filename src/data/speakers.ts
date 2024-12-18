@@ -50,10 +50,31 @@ export const speakers = [
     confirmed: false
   },
   {
+    name: "Grant Buckles",
+    role: "Quantitative Researcher at Instagram",
+    image: "/speakers/grantbuckles.jpg",
+    linkedin: "https://www.linkedin.com/in/grant-buckles/",
+    confirmed: true
+  },
+  {
     name: "Trivan Menezes",
     role: "Software Engineer @ Azure AI",
     image: "/speakers/trivanmenezes.jpg",
     linkedin: "https://www.linkedin.com/in/trivan-menezes/",
+    confirmed: true
+  },
+  {
+    name: "Michael Francis",
+    role: "Founder at Sendrino Labs",
+    image: "/speakers/michaelfrancis.jpg",
+    linkedin: "https://www.linkedin.com/in/michael-francis-86b0177/",
+    confirmed: true
+  },
+  {
+    name: "David Brundage",
+    role: "Director of Informatics at Astrata, Inc",
+    image: "/speakers/michaelfrancis.jpg",
+    linkedin: "https://www.linkedin.com/in/david-brundage-phd-mba-rhia-79a08084/",
     confirmed: true
   },
   {
