@@ -87,7 +87,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bounty Program Section */}
-      <section className="py-20 bg-background text-foreground">
+      <section id="bounty" className="py-20 bg-background text-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Bounty Program</h2>

@@ -73,7 +73,7 @@ export const speakers = [
   {
     name: "David Brundage",
     role: "Director of Informatics at Astrata, Inc",
-    image: "/speakers/michaelfrancis.jpg",
+    image: "/speakers/davidbrundage.jpg",
     linkedin: "https://www.linkedin.com/in/david-brundage-phd-mba-rhia-79a08084/",
     confirmed: true
   },
