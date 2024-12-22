@@ -83,5 +83,12 @@ export const speakers = [
     image: "/speakers/jeffreysquyres.jpg",
     linkedin: "https://www.linkedin.com/in/jsquyres/",
     confirmed: true
+  },
+  {
+    name: "Taylor Payne",
+    role: "Director of Cybersecurity Operations @ Baptist Health",
+    image: "/speakers/taylorpayne.jpg",
+    linkedin: "https://www.linkedin.com/in/paynetaylor/",
+    confirmed: true
   }
 ]
