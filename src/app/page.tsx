@@ -5,7 +5,6 @@ import { HowItWorks } from "@/app/components/howitworks"
 import { Schedule } from "@/app/components/schedule"
 import { Speakers } from "@/app/components/speakers"
 import { Sponsors } from "@/components/sponsors"
-import { Rules } from "@/components/rules"
 
 export default function Page() {
   return (
@@ -17,7 +16,6 @@ export default function Page() {
       <Schedule />
       <Speakers />
       <Sponsors />
-      <Rules />
     </main>
   )
 }

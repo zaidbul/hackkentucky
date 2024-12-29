@@ -19,7 +19,7 @@ export function Sponsors() {
             mentorship, and opportunities to the next generation of tech innovators. Join us in fostering technology 
             education and innovation in Kentucky.
           </p>
-          <Link href="/sponsor-opportunities" className="inline-block text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 font-medium">
+          <Link href="/sponsors" className="inline-block text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 font-medium">
             Learn More About Sponsoring →
           </Link>
         </div>
