@@ -10,15 +10,20 @@ interface PrizeEntry {
 
 const prizes: PrizeEntry[] = [
   {
-    sponsor: "Example Corp",
-    prize: "$1,000",
-    problem: "Create an AI-powered solution to reduce food waste in restaurants",
+    sponsor: "Swell Health",
+    prize: "$250",
+    problem: "TBD",
     requirements: [
-      "Must use machine learning",
-      "Real-time monitoring capabilities",
-      "Mobile-friendly interface"
     ],
-    tracks: ["Environmental", "Startup"]
+    tracks: ["Health", "Startup"]
+  },
+  {
+    sponsor: "Sedrino Labs",
+    prize: "$500",
+    problem: "TBD",
+    requirements: [
+    ],
+    tracks: ["AI", "Startup"]
   },
   // Add more prizes as they come in
 ]
