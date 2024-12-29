@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 const tiers = [
   {
@@ -14,14 +15,10 @@ const tiers = [
   },
   {
     name: "Purple Sponsor",
-    price: "Custom",
+    price: "$250-1000",
     description: "Bring a problem or sponsor a meal",
     features: [
-      // Community features
-      "Help promote the event",
-      "Market the hackathon",
-      "Be part of our community",
-      // Purple specific features
+      "Everything from Community, plus:",
       "Specify your problem and requirements",
       "Cover a meal (Breakfast/Lunch/Dinner)",
       "Customizable whiteboard promotion",
@@ -33,22 +30,11 @@ const tiers = [
   },
   {
     name: "Partner Sponsor",
-    price: "$5,000+",
+    price: "$2,500+",
     description: "You bring the big lift to the event!",
     slots: "3 slots available",
     features: [
-      // Community features
-      "Help promote the event",
-      "Market the hackathon",
-      "Be part of our community",
-      // Purple features
-      "Specify your problem and requirements",
-      "Cover meals",
-      "Customizable whiteboard promotion",
-      "Bring banners and company showcase",
-      "Track competition judge spot",
-      "Network with participants",
-      // Partner specific features
+      "Everything from Purple, plus:",
       "1 Finals Judge spot",
       "Premium Resume Pack",
       "Sponsoring the space",
@@ -65,7 +51,7 @@ const tiers = [
 export function Sponsors() {
   return (
     <>
-      <div className="container py-10 flex flex-col items-center">
+      <div className="container py-10 flex flex-col items-center mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold mb-4">Sponsorship Tiers</h2>
           <p className="text-xl text-muted-foreground">
@@ -113,14 +99,17 @@ export function Sponsors() {
                   )}
                 </CardContent>
                 <CardFooter>
-                  <a
-                    href="https://kycombinator.typeform.com/sponsorhackky"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                  <Link
+                    href="https://form.typeform.com/to/RkKvD2Zw"
+                    className="group relative w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all duration-300"
                   >
-                    Become a Sponsor
-                  </a>
+                    <span className="relative z-10 text-white">Contact Us</span>
+                    <div className="absolute inset-0 overflow-hidden rounded-md">
+                      <div className="firework-1 opacity-0 group-hover:opacity-100" />
+                      <div className="firework-2 opacity-0 group-hover:opacity-100" />
+                      <div className="firework-3 opacity-0 group-hover:opacity-100" />
+                    </div>
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
