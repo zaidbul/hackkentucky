@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface PrizeEntry {
   sponsor: string;
   prize: string;
