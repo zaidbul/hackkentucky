@@ -9,7 +9,7 @@ const ruleCategories = [
   {
     title: "Conduct Rules",
     rules: [
-      "No sex or alcohol",
+      "No drugs or alcohol",
       "No smoking, vaping, on premise",
       "Please be respectful to everyone"
     ]

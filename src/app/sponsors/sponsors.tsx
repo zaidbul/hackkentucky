@@ -100,7 +100,7 @@ export function Sponsors() {
                 </CardContent>
                 <CardFooter>
                   <Link
-                    href="https://form.typeform.com/to/RkKvD2Zw"
+                    href="https://kycombinator.typeform.com/sponsorhackky"
                     className="group relative w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all duration-300"
                   >
                     <span className="relative z-10 text-white">Contact Us</span>
