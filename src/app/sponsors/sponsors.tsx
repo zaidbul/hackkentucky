@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
+import Link from "next/link"  
 
 const tiers = [
   {
@@ -33,7 +33,7 @@ const tiers = [
     price: "$2,500+",
     description: "You bring the big lift to the event!",
     slots: "3 slots available",
-    features: [
+    features: [ 
       "Everything from Purple, plus:",
       "1 Finals Judge spot",
       "Premium Resume Pack",

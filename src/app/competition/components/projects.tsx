@@ -28,15 +28,15 @@ const prizes: PrizeEntry[] = [
   // Add more prizes as they come in
 ]
 
-export function PrizeListings() {
+export function Projects() {
   return (
-    <section className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-6">Sponsored Prizes</h2>
+            <h2 className="text-3xl font-bold mb-6">Sponsored Projects</h2>
             <p className="text-muted-foreground">
-              Companies are offering dedicated prizes for solutions to their challenges
+              Companies are offering dedicated prizes for solutions to their Projects
             </p>
           </div>
 
@@ -80,12 +80,12 @@ export function PrizeListings() {
 
           {/* Call to Action */}
           <div className="bg-primary/5 p-8 rounded-xl text-center">
-            <h3 className="text-2xl font-bold mb-4">Want to Sponsor a Prize?</h3>
+            <h3 className="text-2xl font-bold mb-4">Want to Submit a Project?</h3>
             <p className="text-muted-foreground mb-6">
               Join other innovative companies in challenging our hackers with your problem.
             </p>
             <Link
-              href="https://kycombinator.typeform.com/sponsorhackky"
+              href="https://kycombinator.typeform.com/hackkyproject"
               className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all duration-300"
             >
               Submit Your Prize

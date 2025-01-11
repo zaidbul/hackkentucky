@@ -16,7 +16,13 @@ export function About() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">500+ Participants</h3>
-            <p>High school students, college students, and industry professionals from across the region</p>
+            <p className="mb-4">High school students, college students, and industry professionals from across the region</p>
+            <Link 
+              href="https://kycombinator.typeform.com/resumedrop"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+            >
+              Submit Your Resume →
+            </Link>
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4">$10,000 in Prizes</h3>

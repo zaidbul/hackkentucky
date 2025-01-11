@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./theme-toggle"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Linkedin } from "lucide-react"  
 import { useState } from "react"
 
 export function SiteHeader() {
@@ -11,8 +11,8 @@ export function SiteHeader() {
 
   const navItems = [
     { href: "/", label: "Home" },
+    { href: "/competition", label: "Competition" },
     { href: "/about", label: "About" },
-    { href: "/prizes", label: "Prizes" },
     { href: "/schedule", label: "Schedule" },
     { href: "/speakers", label: "Speakers" },
     { href: "/sponsors", label: "Sponsors" },
@@ -23,9 +23,19 @@ export function SiteHeader() {
     <header className="fixed top-0 w-full bg-background z-50 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-foreground">
-            KYCombinator
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="text-2xl font-bold text-foreground">
+              KYCombinator
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/104791558"
+              target="_blank"
+              className="text-foreground/70 hover:text-foreground transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-5 w-5" />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -62,6 +72,14 @@ export function SiteHeader() {
           {isMenuOpen && (
             <div className="fixed inset-0 top-0 left-0 w-full h-full bg-background z-40 md:hidden">
               <div className="flex flex-col items-center justify-center h-full gap-8 pt-20">
+                <Link
+                  href="https://www.linkedin.com/company/104791558"
+                  target="_blank"
+                  className="text-foreground/70 hover:text-foreground transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Link>
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
