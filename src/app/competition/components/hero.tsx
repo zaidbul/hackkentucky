@@ -25,13 +25,13 @@ export function Hero() {
               $2,500 Grand Prize
             </div>
             <p className="text-2xl text-purple-200">
-              Plus thousands in track prizes and sponsor bounties
+              Plus thousands in track prizes and project awards
             </p>
           </div>
 
           <div className="pt-8">
             <p className="text-xl leading-relaxed text-gray-300">
-              From bounty challenges to track competitions, multiple ways to win big at HackKentucky
+              From project challenges to track competitions, multiple ways to win big at HackKentucky
             </p>
           </div>
 
@@ -47,16 +47,6 @@ export function Hero() {
                 className="bg-white/10 text-white hover:bg-white/20 border-white/20"
               >
                 Format
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => {
-                  document.getElementById('prizes')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-white/10 text-white hover:bg-white/20 border-white/20"
-              >
-                Prizes
               </Button>
               <Button 
                 variant="outline" 

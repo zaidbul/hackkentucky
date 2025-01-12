@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 
 const tracks = [
@@ -110,8 +112,14 @@ export function Format() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold mb-6">Judging Process</h2>
               <p className="text-muted-foreground">
-                Projects can compete in up to 2 tracks. Track winners automatically advance to the finals,
-                with additional wildcard spots available for outstanding projects in competitive tracks.
+                Projects can compete in up to 2 <a href="#tracks" className="text-primary hover:underline" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('tracks')?.scrollIntoView({ behavior: 'smooth' });
+                }}>tracks</a>. Track winners automatically advance to the finals,
+                with additional wildcard spots available for outstanding projects in competitive tracks. View full <a href="#judging" className="text-primary hover:underline" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('judging')?.scrollIntoView({ behavior: 'smooth' });
+                }}>judging criteria</a>.
               </p>
             </div>
             <div className="bg-card p-8 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
@@ -126,7 +134,7 @@ export function Format() {
           </div>
 
           {/* Tracks Section */}
-          <div>
+          <div id="tracks">
             <h2 className="text-3xl font-bold mb-6 text-center">Competition Tracks</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {tracks.map((track) => (

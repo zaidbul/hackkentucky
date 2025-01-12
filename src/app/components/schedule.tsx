@@ -20,8 +20,9 @@ export function Schedule() {
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(scheduleItems).map(([day, items]) => (
             <div key={day} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400 glow">{day}</h3>
-              {items.map((item, index) => (
+              <h3 className="text-2xl font-bold mb-2 text-purple-600 dark:text-purple-400 glow">{day}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{items.description}</p>
+              {items.events.map((item, index) => (
                 <div key={index} className="mb-4 last:mb-0">
                   <div className="flex items-start space-x-3">
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
