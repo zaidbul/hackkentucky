@@ -5,12 +5,11 @@ export function SiteFooter() {
     "Main": [
       { name: "Home", href: "/" },
       { name: "Competition", href: "/competition" },
-      { name: "About", href: "/about" },
       { name: "Schedule", href: "/schedule" },
       { name: "Speakers", href: "/speakers" },
+      { name: "About", href: "/about" },
     ],
     "Resources": [
-      { name: "Rules", href: "/rules" },
       { name: "Sponsor Us", href: "/sponsors" },
       { name: "Deep Work Enclave", href: "https://deepworkenclave.com" },
     ],

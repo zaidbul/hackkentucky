@@ -12,11 +12,10 @@ export function SiteHeader() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/competition", label: "Competition" },
-    { href: "/about", label: "About" },
     { href: "/schedule", label: "Schedule" },
     { href: "/speakers", label: "Speakers" },
     { href: "/sponsors", label: "Sponsors" },
-    { href: "/rules", label: "Rules" },
+    { href: "/about", label: "About" },
   ]
 
   return (

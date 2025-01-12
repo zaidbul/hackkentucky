@@ -88,7 +88,7 @@ export function Projects() {
               href="https://kycombinator.typeform.com/hackkyproject"
               className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-all duration-300"
             >
-              Submit Your Prize
+              Submit Your Project
             </Link>
           </div>
         </div>
