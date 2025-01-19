@@ -53,7 +53,7 @@ export default function SchedulePage() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-purple-800 dark:text-purple-200 text-center">{day}</h2>
             <div className="max-w-3xl mx-auto space-y-6">
-              {items.map((item, index) => (
+              {items.events.map((item, index) => (
                 <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
