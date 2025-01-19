@@ -33,7 +33,7 @@ export function Schedule() {
                       <p className="text-gray-600 dark:text-gray-300">{item.event}</p>
                     </div>
                   </div>
-                  {index < items.length - 1 && (
+                  {index < items.events.length - 1 && (
                     <div className="w-0.5 h-4 bg-purple-300 dark:bg-purple-700 ml-6 my-2"></div>
                   )}
                 </div>
