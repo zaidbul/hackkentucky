@@ -17,21 +17,19 @@ export function Hero() {
       <div className="container relative mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <h1 className="text-7xl font-bold text-white mb-6">
-            Competition
+            Projects
           </h1>
           
           <div className="space-y-6">
-            <div className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-              $2,500 Grand Prize
-            </div>
             <p className="text-2xl text-purple-200">
-              Plus thousands in track prizes and project awards
+              Work on your own problem or tackle one of our sponsored projects. 
+              Companies and community partners submit projects and dedicated prizes! It&apos;s a win-win!
             </p>
           </div>
 
           <div className="pt-8">
             <p className="text-xl leading-relaxed text-gray-300">
-              From project challenges to track competitions, multiple ways to win big at HackKentucky
+              Hackers get to solve real-world problems; project sponsors get a team of hackers working on their project.
             </p>
           </div>
 
@@ -46,7 +44,17 @@ export function Hero() {
                 }}
                 className="bg-white/10 text-white hover:bg-white/20 border-white/20"
               >
-                Format
+                Example Projects
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => {
+                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="bg-white/10 text-white hover:bg-white/20 border-white/20"
+              >
+                Sponsored Projects
               </Button>
             </div>
           </div>

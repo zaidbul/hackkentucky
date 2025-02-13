@@ -104,7 +104,7 @@ export function Projects() {
               <div
                 id={prize.sponsor.toLowerCase().replace(/\s+/g, '-')}
                 key={index}
-                className="bg-card/50 bg-white/25 backdrop-blur-sm rounded-xl shadow-lg border border-border hover:border-primary/50 transition-all duration-300"
+                className="bg-card/50 backdrop-blur-sm rounded-xl shadow-lg border border-border hover:border-primary/50 transition-all duration-300"
               >
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">

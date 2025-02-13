@@ -27,7 +27,7 @@ export function Judging() {
           {/* Presentation Section */}
           <div>
             <h2 className="text-3xl font-bold mb-8 text-center">Presentation Requirements</h2>
-            <div className="space-y-6">
+            <div className="gap-6">
               {presentationRequirements.map((req, index) => (
                 <div key={index} className="bg-card p-6 rounded-lg shadow-sm">
                   <div className="flex items-center gap-4 mb-4">

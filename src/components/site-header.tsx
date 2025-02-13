@@ -12,6 +12,7 @@ export function SiteHeader() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/competition", label: "Competition" },
+    { href: "/projects", label: "Projects" },
     { href: "/schedule", label: "Schedule" },
     { href: "/speakers", label: "Speakers" },
     { href: "/sponsors", label: "Sponsors" },
