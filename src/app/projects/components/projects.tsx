@@ -4,21 +4,17 @@ import Link from "next/link";
 
 interface PrizeEntry {
   sponsor: string;
-  prize: string[];
+  context: string;
   problem: string;
   requirements: string[];
+  prize: string[];
   tracks: string[];
 }
 
 const prizes: PrizeEntry[] = [
   {
     sponsor: "Swell Health",
-    prize: [
-      "$250 cash bounty (split if winner is a team)",
-      "LinkedIn recommendation based on hackathon performance",
-      "Swell merch (t-shirts & stickers)",
-      "Guaranteed full round interview (screening skip) for next engineering opening"
-    ],
+    context: "Swell Health is a startup that provides mental health services to users. Users can book sessions with therapists and counselors.",
     problem: "We partner with advocates, influencers & nonprofits to promote Swell. We need a central hub where we can track and share performance metrics, attribution, and scheduled payouts with partners. This is in essence an affiliate tracking app.",
     requirements: [
       "Solution must be built in Google Apps Script using Google sheets as its database",
@@ -33,10 +29,17 @@ const prizes: PrizeEntry[] = [
       "Bonus: UI consistent with Swell's brand",
       "Bonus: Future development roadmap"
     ],
+    prize: [
+      "$250 cash bounty (split if winner is a team)",
+      "LinkedIn recommendation based on hackathon performance",
+      "Swell merch (t-shirts & stickers)",
+      "Guaranteed full round interview (screening skip) for next engineering opening"
+    ],
     tracks: ["Health", "Startup"]
   },
   {
     sponsor: "Sedrino Labs",
+    context: "Sedrino Labs wants you to be able to create an website within 5 minutes.",
     prize: [
       "Prize amount $500 cash",
       "Recognition on hackathon website and social channels",
@@ -60,7 +63,26 @@ const prizes: PrizeEntry[] = [
     ],
     tracks: ["AI", "Health", "Education"]
   },
-  // Add more prizes as they come in
+  {
+    sponsor: "Anonymous Donor",
+    context: "Louisville International Airport (SDF) is currently the only major commercial airport serving the Greater Louisville Metropolitan Area. As the region continues to grow, there's an increasing need to evaluate additional aviation infrastructure.",
+    problem: "Create a comprehensive analysis and proposal for a second commercial airport in the Greater Louisville area. This should include data-driven insights on economic impact, location feasibility, and community benefits.",
+    requirements: [
+      "Open ended project",
+      "Build a website to show the proposal",
+      "Include community feedback mechanism in the proposal",
+      "Research similar successful dual-airport metropolitan areas",
+      "Address potential challenges and solutions",
+    ],
+    prize: [
+      "Eligible for $500 KSTC community cash prize",
+      "Presentation opportunity to regional development stakeholders",
+      "Letter of recommendation from regional planning committee",
+      "Feature in local transportation newsletter"
+    ],
+    tracks: ["Infrastructure", "Data", "Community"]
+  },
+  
 ]
 
 export function Projects() {
@@ -145,19 +167,12 @@ export function Projects() {
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="w-full md:w-auto">
-                      <h4 className="font-semibold mb-2">Prize Package:</h4>
-                      <ul className="list-none space-y-1">
-                        {prize.prize.map((prizeItem, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span>•</span>
-                            <span className="text-muted-foreground">{prizeItem}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-2">Context:</h4>
+                      <p className="text-muted-foreground">{prize.context}</p>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Problem Statement:</h4>
+                      <h4 className="text-lg font-semibold mb-2">Problem:</h4>
                       <p className="text-muted-foreground">{prize.problem}</p>
                     </div>
 
@@ -168,6 +183,18 @@ export function Projects() {
                           <li key={i} className="flex items-start gap-2">
                             <span>•</span>
                             <span className="text-muted-foreground">{req}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="w-full md:w-auto">
+                      <h4 className="font-semibold mb-2">Prize:</h4>
+                      <ul className="list-none space-y-1">
+                        {prize.prize.map((prizeItem, i) => (
+                          <li key={i} className="flex items-start gap-2">
+                            <span>•</span>
+                            <span className="text-muted-foreground">{prizeItem}</span>
                           </li>
                         ))}
                       </ul>
