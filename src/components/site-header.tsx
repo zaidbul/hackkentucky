@@ -14,7 +14,6 @@ export function SiteHeader() {
     { href: "/competition", label: "Competition" },
     { href: "/projects", label: "Projects" },
     { href: "/schedule", label: "Schedule" },
-    { href: "/speakers", label: "Speakers" },
     { href: "/sponsors", label: "Sponsors" },
     { href: "/about", label: "About" },
   ]

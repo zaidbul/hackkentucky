@@ -5,8 +5,7 @@ interface ScheduleEvent {
   location?: string
   subEvents?: {
     time: string
-    event: string
-    speaker?: string
+    id: number
     details?: string
   }[]
 }
@@ -78,45 +77,43 @@ export const scheduleItems: Record<string, DaySchedule> = {
         subEvents: [
           { 
             time: "11:00 AM", 
-            event: "Lyft / Swell",
-            speaker: "Lyft Engineering Team",
-            details: "Building scalable systems for ride-sharing"
+            id: 2,
+            details: "Recent UofL Alum, Virtual Interview"
+          },
+          { 
+            time: "11:40 AM", 
+            id: 1,
+            details: "Getting a remote job at a top tier tech company"
+          },
+          { 
+            time: "12:20 PM", 
+            id: 4,
+            details: "How to pass the technical interview"
           },
           { 
             time: "1:00 PM", 
-            event: "Facebook Software Engineer",
-            speaker: "Meta Engineering",
-            details: "Social media architecture at scale"
+            id: 5,
+            details: "Google Trust and Safety"
           },
           { 
             time: "1:40 PM", 
-            event: "AWS Solution Architect",
-            speaker: "AWS Team",
-            details: "Cloud infrastructure best practices"
+            id: 3,
+            details: "Starting a startup, First 100 at Lyft"
           },
           { 
             time: "2:20 PM", 
-            event: "Apple Principal Software Engineer",
-            speaker: "Apple Engineering",
-            details: "Building user-centric applications"
+            id: 9,
+            details: "Building a career in tech @ Cisco"
           },
           { 
             time: "3:00 PM", 
-            event: "Netflix Software Engineer",
-            speaker: "Netflix Engineering",
-            details: "Streaming platform architecture"
+            id: 0,
+            details: "Straight from high school to Meta"
           },
           { 
             time: "3:40 PM", 
-            event: "Google",
-            speaker: "Google Engineering Team",
-            details: "Search and scalability"
-          },
-          { 
-            time: "4:20 PM", 
-            event: "Microsoft Azure Engineer",
-            speaker: "Microsoft Cloud Team",
-            details: "Cloud computing and DevOps"
+            id: 6,
+            details: "Follow your passion, a job will follow"
           },
         ]
       },

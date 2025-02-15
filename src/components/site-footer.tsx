@@ -7,7 +7,6 @@ export function SiteFooter() {
       { name: "Competition", href: "/competition" },
       { name: "Projects", href: "/projects" },
       { name: "Schedule", href: "/schedule" },
-      { name: "Speakers", href: "/speakers" },
       { name: "About", href: "/about" },
     ],
     "Resources": [
