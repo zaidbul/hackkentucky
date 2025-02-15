@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+// FIX BACKGROUND COLOR to be Slate so logos appear better
 export function Sponsors() {
   return (
-    <section id="sponsors" className="py-20 bg-secondary text-secondary-foreground">
+    <section id="sponsors" className="py-20 bg-slate-800 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-4 text-center">Our Sponsors</h2>
         <div className="max-w-2xl mx-auto text-center mb-12">
