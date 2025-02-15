@@ -33,6 +33,11 @@ export function Hero() {
             </p>
           </div>
 
+          <div className="pt-12">
+            <p className="text-xl leading-relaxed text-gray-300">
+              Our partner Kentucky Science and Technology Corporation (KSTC) is offering 2 x $500 cash prizes for the community projects!
+            </p>
+          </div>
           {/* Section navigation */}
           <div className="pt-12">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
