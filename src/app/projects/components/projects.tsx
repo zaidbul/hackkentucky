@@ -9,6 +9,7 @@ interface PrizeEntry {
   requirements: string[];
   prize: string[];
   tracks: string[];
+  files?: string[];
 }
 
 const prizes: PrizeEntry[] = [
@@ -82,7 +83,136 @@ const prizes: PrizeEntry[] = [
     ],
     tracks: ["Infrastructure", "Data", "Community"]
   },
-  
+  {
+    sponsor: "Mavi.io",
+    context: "A major fuel retailer is experiencing long wait times at their stations, with an average transaction time of 2 minutes and 40 seconds per vehicle. They're seeking to reduce this time by 15% through a mobile-first solution.",
+    problem: "Develop an Android mobile application that streamlines the fueling process through geofencing, automated authentication, and payment processing to reduce transaction times at fuel stations.",
+    requirements: [
+      "Create a test database with 20 member profiles including 9-digit member numbers, payment info, and fuel preferences",
+      "Implement member authentication via API integration",
+      "Integrate payment verification system (credit/debit/Plaid bank payment) with funds confirmation",
+      "Implement dual geofencing system using Radar SDK for waiting area and fuel dispenser",
+      "Build status indicator system (red/yellow/green circle) based on geofence position",
+      "Create automated fuel dispenser activation via API",
+      "Implement automatic fuel type selection based on user preferences",
+      "Generate digital receipts upon completion",
+      "Track and log timing metrics at each stage",
+      "Deploy database infrastructure on AWS cloud",
+      "Use modern Android development tools (Kotlin preferred)",
+      "Bonus: Analytics dashboard for timing metrics",
+      "Bonus: UI/UX optimized for quick interactions while in vehicle"
+    ],
+    prize: [
+      "Interview opportunity with Mavi.io CTO",
+      "$100 Kroger gift card",
+      "Potential for implementation of winning solution"
+    ],
+    tracks: ["Mobile", "Infrastructure", "Data"],
+    files: ["projects/Fuel_Station_Queue_Buster_Diagram.pptx"]
+  },
+  {
+    sponsor: "Essential Innovations LLC",
+    context: "Kentucky's immigrant and refugee communities face significant challenges in navigating workforce entry and participation, often complicated by language barriers and complex bureaucratic systems.",
+    problem: "Develop an AI-powered multilingual application that helps immigrants and refugees in Kentucky access and understand workforce-related information, requirements, and opportunities in their primary language.",
+    requirements: [
+      "Implement multilingual support for both text and voice interactions",
+      "Create web scraping system for government and advocacy websites",
+      "Build AI-powered Q&A system with source citations (similar to Perplexity)",
+      "Develop both web and mobile applications with offline capabilities",
+      "Implement real-time translation for user interactions",
+      "Create simple admin interface for non-technical staff",
+      "Include document processing for form completion assistance",
+      "Build notification system for policy updates",
+      "Integrate with relevant government APIs where available",
+      "Ensure data privacy and security compliance",
+      "Provide comprehensive documentation for non-technical administrators",
+      "Bonus: Voice recognition and response system",
+      "Bonus: Automated form filling assistance",
+      "Bonus: Community feedback integration"
+    ],
+    prize: [
+      "Premium bourbon bottle",
+      "Choice between:",
+      "• Startup incubation interview opportunity with Essential Innovations",
+      "• Five hours of task/errand service from All The Things (local/remote)"
+    ],
+    tracks: ["AI", "Community", "Mobile"]
+  },
+  {
+    sponsor: "Anonymous Donor",
+    context: "Louisville faces a growing crisis with approximately 1,800 permanently unhoused residents living outdoors, many struggling with mental illness or substance use disorders. The city needs innovative solutions to achieve the goal of housing at least half of this population.",
+    problem: "Create a comprehensive technology-driven solution to help the city of Louisville house at least half of the 1,800 permanently unhoused residents.",
+    requirements: [
+      "Open ended project",
+      "Example: Develop a housing inventory management system to track available units and their specifications",
+      "Example: Create a client relationship management (CRM) system for case workers to track resident interactions",
+    ],
+    prize: [
+      "Eligible for $500 KSTC community cash prize",
+    ],
+    tracks: ["Community", "Data", "Health"]
+  },
+  {
+    sponsor: "Anonymous Donor",
+    context: "As cities compete for talent and growth, Louisville needs innovative ways to attract new residents and showcase its unique qualities. The challenge is to create meaningful connections between the city and potential newcomers.",
+    problem: "Develop a technology solution that helps Louisville attract and retain new residents by highlighting the city's strengths, opportunities, and community while providing personalized insights for potential newcomers.",
+    requirements: [
+      "Open ended project",
+      "Create an interactive platform showcasing Louisville's neighborhoods, culture, and opportunities",
+      "Implement a matching system to connect potential residents with relevant communities and resources",
+      "Develop data visualizations of cost of living, quality of life, and economic opportunities",
+      "Build virtual neighborhood tours and community spotlights",
+      "Include real stories and testimonials from recent transplants",
+      "Create personalized recommendations based on user preferences and needs",
+      "Integrate with job boards and housing markets",
+      "Include comparison tools with other major cities",
+      "Develop metrics to track platform effectiveness",
+    ],
+    prize: [
+      "Eligible for $500 KSTC community cash prize",
+    ],
+    tracks: ["Community"]
+  },
+  {
+    sponsor: "Anonymous Donor",
+    context: "Many students pursue education without clear career direction, often overlooking valuable trade school opportunities. Meanwhile, skilled trades face workforce shortages and offer strong career prospects.",
+    problem: "Create a technology solution that helps students explore, evaluate, and connect with trade school opportunities while providing clear insights into career pathways, earning potential, and industry demand.",
+    requirements: [
+      "Develop an interactive career exploration platform focused on trades",
+      "Create visualization tools for career paths and advancement opportunities",
+      "Build a matching system between student interests/aptitudes and trade programs",
+      "Integrate real-time labor market data and salary information",
+      "Include success stories and day-in-the-life content from trade professionals",
+      "Implement virtual tours of trade school facilities and workplaces",
+      "Create cost comparison tools between different educational paths",
+      "Build connections with local trade schools and employers",
+      "Include apprenticeship and certification tracking",
+      "Develop ROI calculators for different trade paths"
+    ],
+    prize: [
+      "Eligible for $500 KSTC community cash prize"
+    ],
+    tracks: ["Education", "Community", "Data"]
+  },
+  {
+    sponsor: "KeyHorse.VC",
+    context: "KeyHorse.VC needs a modern, engaging website that better represents their role in Kentucky's startup ecosystem and makes it easier for founders to connect with resources.",
+    problem: "Redesign and develop the KeyHorse.VC website to create a more dynamic, user-friendly platform that showcases Kentucky's startup community and facilitates connections between founders, investors, and resources.",
+    requirements: [
+      "Create a modern, responsive design that reflects Kentucky's entrepreneurial spirit",
+      "Build an interactive portfolio showcase of Kentucky startups",
+      "Build a contact system for founder inquiries",
+      "Include success stories and founder testimonials",
+      "Ensure fast loading times and SEO optimization",
+      "Integrate a CMS for easy content updates"
+    ],
+    prize: [
+      "Recognition on the new KeyHorse.VC website",
+      "Networking opportunity with Kentucky startup founders",
+      "Potential for ongoing development work"
+    ],
+    tracks: ["Startup", "Community", "Infrastructure"]
+  },
 ]
 
 export function Projects() {
@@ -199,6 +329,27 @@ export function Projects() {
                         ))}
                       </ul>
                     </div>
+
+                    {prize.files && prize.files.length > 0 && (
+                      <div className="w-full md:w-auto">
+                        <h4 className="font-semibold mb-2">Project Files:</h4>
+                        <ul className="list-none space-y-1">
+                          {prize.files.map((file, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span>•</span>
+                              <Link 
+                                href={`/${file}`}
+                                className="text-primary hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {file.split('/').pop()}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
