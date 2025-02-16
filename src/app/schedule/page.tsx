@@ -77,10 +77,14 @@ export default function SchedulePage() {
                           {item.subEvents.map((subEvent, subIndex) => (
                             <div key={subIndex} className="space-y-1">
                               <div className="flex justify-between items-center">
-                                <p className="font-medium text-gray-900 dark:text-gray-100">{speakers[subEvent.id ?? 0].name}</p>
+                                {subEvent.id ? (
+                                  <p className="font-medium text-gray-900 dark:text-gray-100">{speakers[subEvent.id].name}</p>
+                                ) : (
+                                  <p className="font-medium text-gray-900 dark:text-gray-100">{subEvent.event}</p>
+                                )}
                                 <p className="text-sm text-purple-600 dark:text-purple-400">{subEvent.time}</p>
                               </div>
-                              <p className="text-sm text-gray-600 dark:text-gray-400">{speakers[subEvent.id ?? 0].role}</p>
+                              {subEvent.id && <p className="text-sm text-gray-600 dark:text-gray-400">{speakers[subEvent.id].role}</p>}  
                               {subEvent.details && (
                                 <p className="text-sm text-gray-600 dark:text-gray-400">{subEvent.details}</p>
                               )}
