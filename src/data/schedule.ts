@@ -5,7 +5,8 @@ interface ScheduleEvent {
   location?: string
   subEvents?: {
     time: string
-    id: number
+    id?: number
+    event?: string
     details?: string
   }[]
 }
