@@ -28,7 +28,7 @@ export function HowItWorks() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight mb-4">How It Works</h2>
           <p className="text-lg text-muted-foreground">
-            From idea to demo in less tha 48 hours
+            From idea to demo in less than 48 hours
           </p>
         </div>
 
