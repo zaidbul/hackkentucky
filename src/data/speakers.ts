@@ -43,7 +43,7 @@ export const speakers = [
   {
     id: 5,
     name: "Oliver Ardery",
-    role: "Strategy & Operations at Google - Trust & Safety",
+    role: "Building a career in tech and otherwise",
     image: "/speakers/oliverardery.jpg",
     linkedin: "https://www.linkedin.com/in/oliver-a-0991524/",
     confirmed: false
