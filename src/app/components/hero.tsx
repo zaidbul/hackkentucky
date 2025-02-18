@@ -55,8 +55,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
          <p className="text-lg md:text-xl mb-2 text-purple-900 dark:text-purple-300">
-          <Link href="https://www.kstc.org" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">KSTC</Link> x
-           <Link href="https://www.kycombinator.com" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">KYCombinator</Link> x <Link href="https://www.storylouisville.com" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">Story</Link>
+          <Link href="https://www.kstc.org" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">KSTC</Link> x <Link href="https://www.kycombinator.com" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">KYCombinator</Link> x <Link href="https://www.storylouisville.com" target="_blank" className="hover:text-purple-700 dark:hover:text-purple-400">Story</Link>
          </p>
         <h1 className="text-7xl md:text-9xl font-bold mb-6 tracking-tighter text-purple-900 dark:text-white glow">
           Hack Kentucky
