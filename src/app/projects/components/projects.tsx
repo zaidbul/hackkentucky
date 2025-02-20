@@ -213,6 +213,29 @@ const prizes: PrizeEntry[] = [
     ],
     tracks: ["Startup", "Community", "Infrastructure"]
   },
+  {
+    sponsor: "Louisville Real Estate Innovation",
+    context: "Louisville's real estate market presents unique opportunities at the intersection of opportunity zones, historic districts, and government-sponsored financing programs. However, identifying properties that qualify for multiple incentives requires analyzing various disconnected data sources.",
+    problem: "Create a data-driven web platform that identifies Louisville properties eligible for multiple development incentives by combining opportunity zone data, historic district information, and government financing program criteria.",
+    requirements: [
+      "Build a web interface showing properties that are both in opportunity zones and historic districts",
+      "Integrate PVA (Property Valuation Administrator) data",
+      "Include eligibility checking for Louisville government loan programs",
+      "Create interactive maps showing eligible properties",
+      "Implement property filtering based on development criteria",
+      "Include basic financial analysis tools for investment evaluation",
+      "Document data sources and update frequency",
+      "Bonus: Integration with Zillow API for market data",
+      "Bonus: Web scraping for additional property information",
+      "Bonus: Machine learning for property potential scoring"
+    ],
+    prize: [
+      "Investment partnership opportunity for viable property discoveries",
+      "Mentorship session with experienced real estate developers",
+      "Opportunity to implement solution for ongoing use"
+    ],
+    tracks: ["Data", "Real Estate", "Community"]
+  },
 ]
 
 export function Projects() {
