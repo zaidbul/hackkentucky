@@ -14,11 +14,6 @@ export function Speakers() {
         <p className="text-center mb-8 text-muted-foreground">
           Showcasing world-class tech leaders with Kentucky roots and connections
         </p>
-        <div className="text-center mb-8">
-          <Link href="/speakers" className="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 font-medium">
-            View All Speakers →
-          </Link>
-        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {confirmedSpeakers.map((speaker: Speaker, index: number) => (
             <div key={index} className="text-center">
