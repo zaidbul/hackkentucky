@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { speakers } from '@/data/speakers'
-import Link from 'next/link'
 import { Speaker } from '@/types/speaker'
 
 export function Speakers() {
