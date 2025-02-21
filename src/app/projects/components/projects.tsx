@@ -241,7 +241,7 @@ const prizes: PrizeEntry[] = [
     context: "Peer's focus is to connect people through moments of shared beauty through in-person interactions. Traditional platforms force artists to fit into algorithms and focus on self-promotion over self-expression. Peer offers an alternative through physical tools called Tonics and Cues that bridge the physical and digital world, allowing artists to share their work and supporters to engage with it in a more personal way.",
     problem: "Create a secure, invite-only landing page system that introduces people to Peer's vision while maintaining an intentional, controlled growth of the community through referrals and NFC-enabled Backer Tonics.",
     requirements: [
-      "See here: https://www.notion.so/Peer-Hackathon-Developer-Guide-1a137bcaa3c18074a33fd7d92201e28e?pvs=4",
+      "See here: https://star-gateway-cf5.notion.site/Peer-Hackathon-Developer-Guide-1a137bcaa3c18074a33fd7d92201e28e",
       "Build a gated landing page accessible only through invite links or NFC scans",
       "Implement role-based content paths (artist/supporter/backer)",
       "Create CMS integration for non-technical content updates",
@@ -262,7 +262,7 @@ const prizes: PrizeEntry[] = [
       "Letter of appreciation from Peer team"
     ],
     tracks: ["Community", "Infrastructure", "Startup"],
-    files: ["https://www.notion.so/Peer-Hackathon-Developer-Guide-1a137bcaa3c18074a33fd7d92201e28e?pvs=4"]
+    files: ["https://star-gateway-cf5.notion.site/Peer-Hackathon-Developer-Guide-1a137bcaa3c18074a33fd7d92201e28e"]
   },
 ]
 
