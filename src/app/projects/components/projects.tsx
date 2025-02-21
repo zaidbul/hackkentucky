@@ -195,21 +195,24 @@ const prizes: PrizeEntry[] = [
     tracks: ["Education", "Community", "Data"]
   },
   {
-    sponsor: "KeyHorse.VC",
-    context: "KeyHorse.VC needs a modern, engaging website that better represents their role in Kentucky's startup ecosystem and makes it easier for founders to connect with resources.",
-    problem: "Redesign and develop the KeyHorse.VC website to create a more dynamic, user-friendly platform that showcases Kentucky's startup community and facilitates connections between founders, investors, and resources.",
+    sponsor: "Keyhorse.VC",
+    context: "If a site like KeyHorse.VC were built from the perspective of hackers and THEIR needs and perspectives for exploring at early-stage tech companies, what would it look like and what functionality would it provide?  What needs should be addressed? Related intern, fellow or job opportunities?; in-depth understanding what regional startup community companies are working on?; tech-stack navigator?; finding mentors?; one long page of tik-tok videos? considering funding for one’s own scalable innovation or tech?; or something else entirely?",
+    problem: "Design and develop a replacement to KeyHorse.VC website to create a more dynamic, user-friendly platform for the NEXT tech community; the solution should prioritize this audience (if any other audiences are considered, they should be secondary).",
     requirements: [
+      "Make it data-driven",
+      "Make it useful to participants in HackKentucky",
       "Create a modern, responsive design that reflects Kentucky's entrepreneurial spirit",
-      "Build an interactive portfolio showcase of Kentucky startups",
-      "Build a contact system for founder inquiries",
-      "Include success stories and founder testimonials",
-      "Ensure fast loading times and SEO optimization",
-      "Integrate a CMS for easy content updates"
+      "Features might (or might not) include:",
+      " - An interactive portfolio showcase of Kentucky startups",
+      " - A contact system to facilitate tech community inquiries",
+      " - Success stories and founder testimonials",
+      " - An integrated a CMS for easy content updates",
+      " - Or, who knows, that’s the point, we have no clue"
     ],
     prize: [
-      "Recognition on the new KeyHorse.VC website",
+      "Something super fancy, tbd",
       "Networking opportunity with Kentucky startup founders",
-      "Potential for ongoing development work"
+      "Eligible for $500 KSTC community cash prize"
     ],
     tracks: ["Startup", "Community", "Infrastructure"]
   },
