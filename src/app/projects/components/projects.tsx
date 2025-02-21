@@ -236,6 +236,33 @@ const prizes: PrizeEntry[] = [
     ],
     tracks: ["Data", "Real Estate", "Community"]
   },
+  {
+    sponsor: "Peer",
+    context: "Peer's focus is to connect people through moments of shared beauty through in-person interactions. Traditional platforms force artists to fit into algorithms and focus on self-promotion over self-expression. Peer offers an alternative through physical tools called Tonics and Cues that bridge the physical and digital world, allowing artists to share their work and supporters to engage with it in a more personal way.",
+    problem: "Create a secure, invite-only landing page system that introduces people to Peer's vision while maintaining an intentional, controlled growth of the community through referrals and NFC-enabled Backer Tonics.",
+    requirements: [
+      "Build a gated landing page accessible only through invite links or NFC scans",
+      "Implement role-based content paths (artist/supporter/backer)",
+      "Create CMS integration for non-technical content updates",
+      "Develop phone number/email validation system for access",
+      "Build member dashboard with invite link generation",
+      "Implement referral tracking system",
+      "Create simple payment integration (Venmo initially)",
+      "Design system reflecting Peer's values of intention and community",
+      "Implement invite link sharing via text/email/airdrop",
+      "Build referral tracking dashboard",
+      "Bonus: Downstream referral counter",
+      "Bonus: Team updates integration in dashboard",
+      "Bonus: Payment and purchase tracking for admins"
+    ],
+    prize: [
+      "$250 cash bounty",
+      "Recognition in Peer's first community update",
+      "Letter of appreciation from Peer team"
+    ],
+    tracks: ["Community", "Infrastructure", "Startup"],
+    files: ["https://www.notion.so/Peer-Hackathon-Developer-Guide-1a137bcaa3c18074a33fd7d92201e28e?pvs=4"]
+  },
 ]
 
 export function Projects() {
@@ -361,7 +388,7 @@ export function Projects() {
                             <li key={i} className="flex items-start gap-2">
                               <span>•</span>
                               <Link 
-                                href={`/${file}`}
+                                href={file}
                                 className="text-primary hover:underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
