@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Build & Chill 2025 | HackKentucky",
-  description: "March 22nd, 2025 @ Story. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
+  description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
   openGraph: {
     title: "Build & Chill 2025",
-    description: "March 22nd, 2025 @ Story. A laid-back day-of hack for builders who never stop tinkering",
+    description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
     images: [{
       url: '/buildnchill.png',
       alt: "Build & Chill 2025"
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Build & Chill 2025",
-    description: "Code, Create & Collaborate",
+    description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
     images: ['/buildnchill.png'],
   }
 }
