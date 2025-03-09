@@ -108,6 +108,16 @@ export function Hero() {
                 </div>
               </Link>
             </Button>
+            <Button asChild size="lg" variant="link" className="text-purple-700 hover:text-purple-600 dark:text-purple-300 dark:hover:text-purple-400">
+              <Link href="/spring25/winners">
+                <div className="flex items-center gap-2">
+                  <svg fill="currentColor" height="16" width="16" viewBox="0 0 24 24">
+                    <path d="M12 6.76l1.379 4.246h4.465l-3.612 2.625 1.379 4.246L12 15.252l-3.611 2.625 1.379-4.246-3.612-2.625h4.465L12 6.76zm0-6.472L9.167 7.252H2.499l5.416 3.936L5.083 18.14 12 13.084l6.917 5.056-2.832-6.952 5.416-3.936h-6.668L12 .288z"/>
+                  </svg>
+                  View Winners
+                </div>
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
