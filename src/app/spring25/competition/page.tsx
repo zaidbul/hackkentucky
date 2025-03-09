@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/site-header"
+import { SiteHeader } from "@/app/spring25/components/site-header"
 import { Hero } from "./components/hero"
 import { Format } from "./components/format"
 import { Judging } from "./components/judging"

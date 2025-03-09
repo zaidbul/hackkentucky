@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "./theme-toggle"
+import { ThemeToggle } from "../../../components/theme-toggle"
 import { Menu, X, Linkedin } from "lucide-react"  
 import { useState } from "react"
 

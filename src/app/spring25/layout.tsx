@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import { Space_Grotesk } from 'next/font/google'
-import { ThemeProvider } from "@/components/theme-provider"
-import { PageTransition } from "@/components/page-transition"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import { TechBackground } from "@/components/tech-background"
+import { ThemeProvider } from "@/app/spring25/components/theme-provider"
+import { PageTransition } from "@/app/spring25/components/page-transition"
+import { SiteHeader } from "@/app/spring25/components/site-header"
+import { SiteFooter } from "@/app/spring25/components/site-footer"
+import { TechBackground } from "@/app/spring25/components/tech-background"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 export const metadata: Metadata = {
