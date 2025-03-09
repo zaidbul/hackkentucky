@@ -1,5 +1,5 @@
 import { Clock } from 'lucide-react'
-import { scheduleItems } from '@/data/schedule'
+import { scheduleItems } from '@/app/spring25/data/schedule'
 import Link from 'next/link'
 
 export function Schedule() {

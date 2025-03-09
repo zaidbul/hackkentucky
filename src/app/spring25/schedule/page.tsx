@@ -1,7 +1,7 @@
 import { Clock, MapPin } from 'lucide-react'
-import { scheduleItems } from '@/data/schedule'
+import { scheduleItems } from '@/app/spring25/data/schedule'
 import { SiteHeader } from "@/app/spring25/components/site-header"
-import { speakers } from '@/data/speakers'
+import { speakers } from '@/app/spring25/data/speakers'
 
 export default function SchedulePage() {
   return (

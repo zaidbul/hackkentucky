@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { speakers } from '@/data/speakers'
+import { speakers } from '@/app/spring25/data/speakers'
 import { Speaker } from '@/types/speaker'
 
 export function Speakers() {
