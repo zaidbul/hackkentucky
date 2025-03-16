@@ -35,7 +35,7 @@ const winners = [
 
 export default function WinnersPage() {
   return (
-    <main className="container max-w-4xl py-12 px-4 sm:px-6 lg:px-8">
+    <main className="container max-w-4xl mx-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
           Spring 2025 Winners
