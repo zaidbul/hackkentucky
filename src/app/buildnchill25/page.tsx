@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Build & Chill 2025 | HackKentucky",
-  description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
+  description: "March 22nd, 2025 @ Story. KYC presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
   openGraph: {
     title: "Build & Chill 2025",
-    description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
+    description: "March 22nd, 2025 @ Story. KYC presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
     images: [{
       url: '/buildnchill.png',
       alt: "Build & Chill 2025"
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Build & Chill 2025",
-    description: "March 22nd, 2025 @ Story. KYCombinator presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
+    description: "March 22nd, 2025 @ Story. KYC presents Build & Chill. A laid-back day-of hack for builders who never stop tinkering. Join us for code, creativity, and good company.",
     images: ['/buildnchill.png'],
   }
 }
@@ -44,7 +44,7 @@ const features = [
 
 const projects = [
   {
-    title: "Improve KYCombinator",
+    title: "Improve KYC",
     description: "Help enhance Kentucky's tech ecosystem platform with new features and improvements.",
     icon: "🚀",
     difficulty: "Medium"
@@ -173,13 +173,13 @@ export default function BuildAndChillPage() {
         </section>
 
         <section className="my-16">
-          <h2 className="text-2xl font-bold mb-6">Help KYCombinator</h2>
+          <h2 className="text-2xl font-bold mb-6">Help KYC</h2>
           <div className="mb-8">
             <p className="text-muted-foreground">
               All projects are open source and welcome contributors of all skill levels. 
               Find more on our{" "}
               <a 
-                href="https://github.com/KYCombinator" 
+                href="https://github.com/KYC" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary hover:underline font-medium"

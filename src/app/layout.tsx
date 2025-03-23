@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Hack Kentucky 2025",
   description: "Kentucky's Premier Hackathon Event - Join us for 48 hours of coding, learning, and building with top tech companies",
   keywords: ["hackathon", "kentucky", "programming", "coding", "tech", "students"],
-  authors: [{ name: "KYCombinator" }],
+  authors: [{ name: "KYC" }],
   openGraph: {
     type: "website",
     locale: "en_US",

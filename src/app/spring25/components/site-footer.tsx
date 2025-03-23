@@ -67,7 +67,7 @@ export function SiteFooter() {
         {/* Address and Copyright */}
         <div className="text-center text-gray-400 text-sm space-y-2 pt-8 border-t border-gray-800">
           <p>828 E Market St, Louisville, Kentucky 40206</p>
-          <p>© {new Date().getFullYear()} KYCombinator. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} KYC. All rights reserved.</p>
         </div>
       </div>
     </footer>
