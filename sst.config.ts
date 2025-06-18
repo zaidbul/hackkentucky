@@ -13,12 +13,65 @@ export default $config({
   async run() {
     new sst.aws.Nextjs("HackKentucky", {
       domain: {
-        name: "www.hackkentucky.com",
+        name: "hackkentucky.com",
         dns: sst.aws.dns({
           zone: "Z02904321CAP9QVOTBGLO",
         }),
         cert: "arn:aws:acm:us-east-1:418295680070:certificate/86272627-eac2-4c36-b28f-bc851616a377",
       },
     });
+
+    // ✅ Redirect www → root
+    const redirectFn = new aws.cloudfront.Function("RedirectWWW", {
+      runtime: "cloudfront-js-1.0", // ✅ required
+      code: `
+        function handler(event) {
+          var host = event.request.headers.host.value;
+          if (host === "www.hackkentucky.com") {
+            return {
+              statusCode: 301,
+              statusDescription: "Moved Permanently",
+              headers: {
+                location: { value: "https://hackkentucky.com" }
+              }
+            };
+          }
+          return event.request;
+        }
+      `,
+    });
+        
+    new aws.cloudfront.Distribution("WWWHackKentuckyRedirect", {
+      aliases: ["www.hackkentucky.com"],
+      enabled: true,
+      restrictions: {
+        geoRestriction: {
+          restrictionType: "none",
+        },
+      },
+      origins: [
+        {
+          originId: "placeholder-origin",
+          domainName: "hackkentucky.com",
+        },
+      ],
+      defaultCacheBehavior: {
+        targetOriginId: "placeholder-origin",
+        viewerProtocolPolicy: "redirect-to-https",
+        allowedMethods: ["GET", "HEAD"],
+        cachedMethods: ["GET", "HEAD"],
+        functionAssociations: [
+          {
+            eventType: "viewer-request",
+            functionArn: redirectFn.arn,
+          },
+        ],
+      },
+      viewerCertificate: {
+        acmCertificateArn: "arn:aws:acm:us-east-1:418295680070:certificate/86272627-eac2-4c36-b28f-bc851616a377",
+        sslSupportMethod: "sni-only",
+      },
+    });
+
   },
 });
