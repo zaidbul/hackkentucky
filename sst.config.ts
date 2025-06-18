@@ -53,6 +53,12 @@ export default $config({
         {
           originId: "placeholder-origin",
           domainName: "hackkentucky.com",
+          customOriginConfig: {
+            originProtocolPolicy: "https-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
+          },
         },
       ],
       defaultCacheBehavior: {
