@@ -41,7 +41,7 @@ export default $config({
       `,
     });
         
-    new aws.cloudfront.Distribution("WWWHackKentuckyRedirect", {
+    const wwwRedirectDist = new aws.cloudfront.Distribution("WWWHackKentuckyRedirect", {
       aliases: ["www.hackkentucky.com"],
       enabled: true,
       restrictions: {
@@ -80,5 +80,16 @@ export default $config({
       },
     });
 
+    // ✅ Add this Route 53 record
+    new aws.route53.Record("WWWAliasRecord", {
+      name: "www.hackkentucky.com",
+      type: "A",
+      zoneId: "Z02904321CAP9QVOTBGLO",
+      aliases: [{
+        name: wwwRedirectDist.domainName,
+        zoneId: "Z2FDTNDATAQYW2", // AWS' global CloudFront zone ID (always the same)
+        evaluateTargetHealth: false,
+      }],
+    });
   },
 });
