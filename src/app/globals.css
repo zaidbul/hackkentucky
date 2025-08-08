@@ -182,3 +182,57 @@
     0 0 30px rgba(147,51,234,0.1);
   transform: translateY(-1px);
 }
+
+@font-face {
+  font-family: 'AtAmiga';
+  src: url('/fonts/AtAmiga-Regular.woff2') format('woff2'),
+       url('/fonts/AtAmiga-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-atamiga {
+  font-family: 'AtAmiga', monospace;
+}
+
+/* Grid overlay inspired by the design */
+.grid-overlay {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.dark .grid-overlay {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Orange accent color inspired by the design */
+.accent-orange {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+/* Glassmorphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ScrollSmoother styles */
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
