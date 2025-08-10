@@ -22,7 +22,7 @@ function horizontalLoop(items: any[], config: any = {}) { // eslint-disable-line
   }
   
   gsap.context(() => {
-    const onChange = config.onChange,
+    const onChange = config.onChange;
       let lastIndex = 0;
       const tl = gsap.timeline({
         repeat: config.repeat, 
