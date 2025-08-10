@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { GridSection, GridContainer, StatCard, FeatureCard } from "@/components/ui/grid-section"
 import Link from "next/link"
 
 export default function Winter25Page() {
@@ -58,7 +57,7 @@ export default function Winter25Page() {
         <div className="col-span-4 border-[1px] border-zinc-900/40 p-8">
           <h2 className="text-3xl font-bold tracking-wider mb-6 font-atamiga text-center">ABOUT HACK KENTUCKY</h2>
           <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-8">
-            HackKentucky is Kentucky's premier hackathon, bringing together the brightest minds in technology and innovation. 
+            HackKentucky is Kentucky&apos;s premier hackathon, bringing together the brightest minds in technology and innovation. 
             Join us for 48 hours of coding, creativity, and collaboration!
           </p>
           
@@ -104,19 +103,19 @@ export default function Winter25Page() {
             <div className="border-[1px] border-zinc-900/40 p-6 bg-white text-center">
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-xl font-bold mb-2">Form Your Team</h3>
-              <p className="text-gray-600">Build a team of up to 4 hackers. Don't have a team? No problem! We'll help you find one during team formation.</p>
+              <p className="text-gray-600">Build a team of up to 4 hackers. Don&apos;t have a team? No problem! We&apos;ll help you find one during team formation.</p>
             </div>
             
             <div className="border-[1px] border-zinc-900/40 p-6 bg-white text-center">
               <div className="text-4xl mb-4">💡</div>
               <h3 className="text-xl font-bold mb-2">Brainstorm & Build</h3>
-              <p className="text-gray-600">You'll have 48 hours to turn your idea into reality. Mentors will be available to help you along the way.</p>
+              <p className="text-gray-600">You&apos;ll have 48 hours to turn your idea into reality. Mentors will be available to help you along the way.</p>
             </div>
             
             <div className="border-[1px] border-zinc-900/40 p-6 bg-white text-center">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-2">Present Your Project</h3>
-              <p className="text-gray-600">Show off what you've built to our judges and fellow hackers in a science-fair style presentation.</p>
+              <p className="text-gray-600">Show off what you&apos;ve built to our judges and fellow hackers in a science-fair style presentation.</p>
             </div>
             
             <div className="border-[1px] border-zinc-900/40 p-6 bg-white text-center">
@@ -131,7 +130,7 @@ export default function Winter25Page() {
         <div id="participants" className="col-span-2 border-[1px] border-zinc-900/40 p-8 bg-blue-50">
           <h2 className="text-3xl font-bold tracking-wider mb-4 font-atamiga">FOR PARTICIPANTS</h2>
           <p className="text-xl font-semibold mb-4 text-blue-800">
-            Distinguish yourself in Kentucky's growing tech ecosystem
+            Distinguish yourself in Kentucky&apos;s growing tech ecosystem
           </p>
           <p className="text-gray-700 mb-6">
             Join us for an exclusive opportunity to connect with leading companies, showcase your skills, and take the first step towards your dream career in technology.
@@ -169,7 +168,7 @@ export default function Winter25Page() {
             Tech Forward Companies Engaging with Top Talent
           </p>
           <p className="text-gray-700 mb-6">
-            Connect with Kentucky's brightest minds and future innovators while showcasing your company's opportunities and culture.
+            Connect with Kentucky&apos;s brightest minds and future innovators while showcasing your company&apos;s opportunities and culture.
           </p>
           
           <div className="space-y-3 mb-6">

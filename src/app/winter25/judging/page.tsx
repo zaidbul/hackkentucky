@@ -21,7 +21,7 @@ export default function JudgingPage() {
           <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200 mb-6">
             <p className="text-lg text-blue-800 font-medium">
               In alignment with our values, the KYCombinator hackathon rewards <strong>high-agency and high-velocity</strong>. 
-              We're looking at speed, execution, and impact. We're indexing on progress - not just motion.
+              We&apos;re looking at speed, execution, and impact. We&apos;re indexing on progress - not just motion.
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function JudgingPage() {
                 <h3 className="font-semibold">Minutes: Problem & Solution</h3>
               </div>
               <p className="text-sm text-gray-600 ml-11">
-                Hacker explains who's their customer, what's their problem, and what's the solution
+                Hacker explains who&apos;s their customer, what&apos;s their problem, and what&apos;s the solution
               </p>
             </div>
             
@@ -135,7 +135,7 @@ export default function JudgingPage() {
               
               <div className="space-y-2 text-sm text-gray-600">
                 <p>• Clear explanation under pressure</p>
-                <p>• Can "sell" the solution effectively</p>
+                <p>• Can &quot;sell&quot; the solution effectively</p>
                 <p>• Demo flows smoothly</p>
                 <p>• Professional presentation</p>
               </div>
@@ -154,7 +154,7 @@ export default function JudgingPage() {
                 <p>• Big, painful problem for sizable group</p>
                 <p>• Solution actually solves the problem</p>
                 <p>• Highly effective at solving problem</p>
-                <p>• "Finished" MVP ready state</p>
+                <p>• &quot;Finished&quot; MVP ready state</p>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function JudgingPage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-semibold mb-3">Judge's Discretion</h3>
+              <h3 className="font-semibold mb-3">Judge&apos;s Discretion</h3>
               <p className="text-sm text-gray-600">
                 Judges can award up to 3 additional points at their discretion for 
                 exceptional innovation, technical excellence, or other standout qualities.

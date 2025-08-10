@@ -164,7 +164,7 @@ export default function SpeakersPage() {
         {/* Call to Action */}
         <div className="col-span-4 border-[1px] border-zinc-900/40 p-8 flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold tracking-wider mb-4 font-atamiga">LEARN FROM THE BEST</h2>
-          <p className="text-lg text-gray-600 mb-6 text-center">Don't miss these exclusive talks from industry experts</p>
+          <p className="text-lg text-gray-600 mb-6 text-center">Don&apos;t miss these exclusive talks from industry experts</p>
           <Button className="bg-black text-white px-8 py-3 text-lg hover:bg-gray-800">
             Register Now
           </Button>

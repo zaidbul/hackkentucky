@@ -94,7 +94,7 @@ export default function FormatPage() {
               </div>
               <p className="text-sm text-gray-700">
                 Track winners compete for the grand prize. In a crowded track? 
-                Don't worry - there are also "wildcard" spots for the finals.
+                Don&apos;t worry - there are also &quot;wildcard&quot; spots for the finals.
               </p>
             </div>
             
@@ -103,7 +103,7 @@ export default function FormatPage() {
               <ul className="text-sm text-gray-600 space-y-2">
                 <li>• Track-specific sponsor prizes</li>
                 <li>• Best use of technology awards</li>
-                <li>• People's choice award</li>
+                <li>• People&apos;s choice award</li>
                 <li>• Most innovative solution</li>
               </ul>
             </div>
@@ -193,7 +193,7 @@ export default function FormatPage() {
         {/* Call to Action */}
         <div className="col-span-4 border-[1px] border-zinc-900/40 p-8 flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold tracking-wider mb-4 font-atamiga">READY TO COMPETE?</h2>
-          <p className="text-lg text-gray-600 mb-6 text-center">Join Kentucky's premier hackathon competition</p>
+          <p className="text-lg text-gray-600 mb-6 text-center">Join Kentucky&apos;s premier hackathon competition</p>
           <Button className="bg-black text-white px-8 py-3 text-lg hover:bg-gray-800">
             Register Your Team
           </Button>

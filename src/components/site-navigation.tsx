@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Navigation, NavigationBrand, NavigationMenu, NavigationMenuItem, NavigationActions } from "@/components/ui/navigation"
+import { Navigation, NavigationBrand, NavigationActions } from "@/components/ui/navigation"
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
@@ -15,7 +14,7 @@ function FlickerText({ children, className, style }: { children: string, classNa
     if (!textRef.current) return
 
     const text = textRef.current
-    const chars = children.split('').map((char, index) => {
+    const chars = children.split('').map((char) => {
       const span = document.createElement('span')
       span.textContent = char === ' ' ? '\u00A0' : char // Use non-breaking space
       span.style.display = 'inline-block'

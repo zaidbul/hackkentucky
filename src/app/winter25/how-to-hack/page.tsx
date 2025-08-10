@@ -61,7 +61,7 @@ export default function HowToHackPage() {
                 Your problem should be narrow and your solution technically simple.
               </p>
               <div className="bg-gray-50 p-3 rounded text-xs text-gray-700">
-                <strong>Remember:</strong> It's better to solve one problem really well than 
+                <strong>Remember:</strong> It&apos;s better to solve one problem really well than 
                 to try solving multiple problems poorly.
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function HowToHackPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Start Fast, Decide Faster</h3>
                     <p className="text-sm text-gray-600">
-                      Pick an idea in 15 minutes - don't overthink it. The faster you decide, the more time you have to build.
+                      Pick an idea in 15 minutes - don&apos;t overthink it. The faster you decide, the more time you have to build.
                     </p>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function HowToHackPage() {
                 <div className="flex items-start mb-3">
                   <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">2</div>
                   <div>
-                    <h3 className="font-semibold mb-2">Build a "Demo-First" MVP</h3>
+                    <h3 className="font-semibold mb-2">Build a &quot;Demo-First&quot; MVP</h3>
                     <p className="text-sm text-gray-600">
                       Prioritize something you can SHOW, not just talk about. Skip perfect architecture - make it work first.
                     </p>
@@ -104,7 +104,7 @@ export default function HowToHackPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Ship Small, Ship Often</h3>
                     <p className="text-sm text-gray-600">
-                      Get a working version ASAP - even if it's ugly. Frequent commits & small wins keep momentum high.
+                      Get a working version ASAP - even if it&apos;s ugly. Frequent commits & small wins keep momentum high.
                     </p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function HowToHackPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Automate Boring, Non-Innovative Stuff</h3>
                     <p className="text-sm text-gray-600">
-                      Use APIs, AI tools, and no-code where you can. Don't reinvent the wheel - move fast!
+                      Use APIs, AI tools, and no-code where you can. Don&apos;t reinvent the wheel - move fast!
                     </p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ export default function HowToHackPage() {
                   <div>
                     <h3 className="font-semibold mb-2">Divide & Conquer</h3>
                     <p className="text-sm text-gray-600">
-                      One person stuck? Move on or swap tasks. Time is your biggest enemy - don't waste it!
+                      One person stuck? Move on or swap tasks. Time is your biggest enemy - don&apos;t waste it!
                     </p>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function HowToHackPage() {
                   <div>
                     <h3 className="font-semibold mb-2">The Best Hack = A Working Hack</h3>
                     <p className="text-sm text-gray-600">
-                      It doesn't have to be revolutionary. If it works and looks impressive, you're winning.
+                      It doesn&apos;t have to be revolutionary. If it works and looks impressive, you&apos;re winning.
                     </p>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export default function HowToHackPage() {
                 Boilerplate code will get you working faster.
               </p>
               <div className="bg-gray-50 p-3 rounded text-xs text-gray-700">
-                If you're using AI or template engines, leverage them for the less innovative work (like login flows)
+                If you&apos;re using AI or template engines, leverage them for the less innovative work (like login flows)
               </div>
             </div>
             
@@ -250,7 +250,7 @@ export default function HowToHackPage() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <h3 className="font-semibold mb-2">Clear Value Proposition</h3>
               <p className="text-sm text-gray-600">
-                Can a 5-year-old understand what problem you're solving?
+                Can a 5-year-old understand what problem you&apos;re solving?
               </p>
             </div>
             

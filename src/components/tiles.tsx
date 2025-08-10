@@ -1,6 +1,16 @@
 import UnicornScene from "unicornstudio-react";
 import { memo, useEffect, useMemo, useState } from "react";
 
+interface Breakpoint {
+  name: string;
+  props: Record<string, unknown>;
+}
+
+interface SceneNode {
+  breakpoints?: Breakpoint[];
+  [key: string]: unknown;
+}
+
 // Create a static hash for caching
 const TILES_HASH = "a1b23c76723dddy6";
 
@@ -14,20 +24,20 @@ const Tiles = memo(({ className }: { className?: string }) => {
     let active = true;
     let currentBlobUrl: string | null = null;
 
-    const addDesktopBreakpointIfMissing = (node: any) => {
+    const addDesktopBreakpointIfMissing = (node: SceneNode) => {
       if (!node || typeof node !== "object") return;
       if (Array.isArray(node.breakpoints)) {
         const hasDesktop = node.breakpoints.some(
-          (bp: any) => bp && bp.name === "Desktop"
+          (bp: Breakpoint) => bp && bp.name === "Desktop"
         );
         if (!hasDesktop) {
           node.breakpoints.unshift({ name: "Desktop", props: {} });
         }
       }
       for (const key of Object.keys(node)) {
-        const value = (node as any)[key];
+        const value = node[key];
         if (value && typeof value === "object") {
-          addDesktopBreakpointIfMissing(value);
+          addDesktopBreakpointIfMissing(value as SceneNode);
         }
       }
     };

@@ -11,7 +11,7 @@ export default function SponsorshipPage() {
         <div className="col-span-4 border-[1px] border-zinc-900/40 p-8 flex flex-col justify-center">
           <h1 className="text-4xl md:text-[120px] font-bold tracking-wider mb-8 font-atamiga">SPONSOR</h1>
           <h1 className="text-4xl md:text-[120px] font-bold tracking-wider mb-4 font-atamiga">HACK KENTUCKY</h1>
-          <p className="text-xl text-gray-600 mt-8">Partner with Kentucky's most innovative minds</p>
+          <p className="text-xl text-gray-600 mt-8">Partner with Kentucky&apos;s most innovative minds</p>
         </div>
 
         {/* Why Sponsor Section */}
@@ -22,7 +22,7 @@ export default function SponsorshipPage() {
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg border border-gray-200">
                 <h3 className="text-xl font-semibold mb-3">Hire & Attract Top Talent</h3>
-                <p className="text-gray-600">We're asking hackers to work intensively for 48 hours. These will be the most talented and motivated individuals in Kentucky.</p>
+                <p className="text-gray-600">We&apos;re asking hackers to work intensively for 48 hours. These will be the most talented and motivated individuals in Kentucky.</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -184,7 +184,7 @@ export default function SponsorshipPage() {
         {/* Contact Section */}
         <div className="col-span-4 border-[1px] border-zinc-900/40 p-8 flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold tracking-wider mb-4 font-atamiga">READY TO SPONSOR?</h2>
-          <p className="text-lg text-gray-600 mb-6 text-center">Join us in building Kentucky's next generation of tech innovators</p>
+          <p className="text-lg text-gray-600 mb-6 text-center">Join us in building Kentucky&apos;s next generation of tech innovators</p>
           <Button className="bg-black text-white px-8 py-3 text-lg hover:bg-gray-800">
             Contact Us
           </Button>
