@@ -9,12 +9,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { TextPlugin } from "gsap/TextPlugin"
 import Tiles from "@/components/tiles";
-import TilesMD from "@/components/tilesmd";
 import TilesSM from "@/components/tilessm";
 import Link from "next/link"
 
-function horizontalLoop(items: any[], config: any = {}) {
-  let timeline: any;
+function horizontalLoop(items: any[], config: any = {}) { // eslint-disable-line @typescript-eslint/no-explicit-any
+  let timeline: any; // eslint-disable-line @typescript-eslint/no-explicit-any
   items = gsap.utils.toArray(items);
   
   // Check if items exist and have valid DOM properties
@@ -23,12 +22,12 @@ function horizontalLoop(items: any[], config: any = {}) {
   }
   
   gsap.context(() => {
-    let onChange = config.onChange,
-      lastIndex = 0,
-      tl = gsap.timeline({
+    const onChange = config.onChange,
+      let lastIndex = 0;
+      const tl = gsap.timeline({
         repeat: config.repeat, 
         onUpdate: onChange && function() {
-          let i = (tl as any).closestIndex();
+          const i = (tl as any).closestIndex(); // eslint-disable-line @typescript-eslint/no-explicit-any
           if (lastIndex !== i) {
             lastIndex = i;
             onChange(items[i], i);
@@ -44,15 +43,16 @@ function horizontalLoop(items: any[], config: any = {}) {
       widths: number[] = [],
       spaceBefore: number[] = [],
       xPercents: number[] = [],
-      curIndex = 0,
-      indexIsDirty = false,
+      let curIndex = 0,
+      let indexIsDirty = false,
       center = config.center,
       pixelsPerSecond = (config.speed || 1) * 100,
-      snap = config.snap === false ? (v: any) => v : gsap.utils.snap(config.snap || 1),
+      snap = config.snap === false ? (v: any) => v : gsap.utils.snap(config.snap || 1), // eslint-disable-line @typescript-eslint/no-explicit-any
       timeOffset = 0,
       container = center === true ? items[0].parentNode : gsap.utils.toArray(center)[0] || items[0].parentNode,
-      totalWidth: number,
-      getTotalWidth = () => {
+      let totalWidth: number;
+
+      const getTotalWidth = () => {
         const scaleX = Number(gsap.getProperty(items[length-1], "scaleX")) || 1;
         return items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + spaceBefore[0] + items[length-1].offsetWidth * scaleX + (parseFloat(config.paddingRight) || 0);
       },
@@ -73,9 +73,9 @@ function horizontalLoop(items: any[], config: any = {}) {
         });
         totalWidth = getTotalWidth();
       },
-      timeWrap: any,
+      let timeWrap: any,
       populateOffsets = () => {
-        timeOffset = center ? tl.duration() * (container.offsetWidth / 2) / totalWidth : 0;
+        let timeOffset = center ? tl.duration() * (container.offsetWidth / 2) / totalWidth : 0;
         if (center && timeWrap) {
           times.forEach((_, i) => {
             times[i] = timeWrap(tl.labels["label" + i] + tl.duration() * widths[i] / 2 / totalWidth - timeOffset);
@@ -112,7 +112,7 @@ function horizontalLoop(items: any[], config: any = {}) {
             .add("label" + i, distanceToStart / pixelsPerSecond);
           times[i] = distanceToStart / pixelsPerSecond;
         }
-        timeWrap = gsap.utils.wrap(0, tl.duration());
+        let timeWrap = gsap.utils.wrap(0, tl.duration()); // eslint-disable-line @typescript-eslint/no-explicit-any
       },
       refresh = (deep?: boolean) => {
         let progress = tl.progress();
