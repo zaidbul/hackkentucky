@@ -41,6 +41,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/ywk2uab.css" />
+      </head>
       <body className={cabin.className}>
         {children}
       </body>
