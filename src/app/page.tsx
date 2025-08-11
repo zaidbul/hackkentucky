@@ -12,173 +12,173 @@ import Tiles from "@/components/tiles";
 import TilesSM from "@/components/tilessm";
 import Link from "next/link"
 
-function horizontalLoop(items: any[], config: any = {}) { // eslint-disable-line @typescript-eslint/no-explicit-any
-  let timeline: any; // eslint-disable-line @typescript-eslint/no-explicit-any
-  items = gsap.utils.toArray(items);
+// function horizontalLoop(items: any[], config: any = {}) { // eslint-disable-line @typescript-eslint/no-explicit-any
+//   let timeline: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+//   items = gsap.utils.toArray(items);
   
-  // Check if items exist and have valid DOM properties
-  if (!items.length || !items[0] || typeof items[0].offsetLeft === 'undefined') {
-    return null;
-  }
+//   // Check if items exist and have valid DOM properties
+//   if (!items.length || !items[0] || typeof items[0].offsetLeft === 'undefined') {
+//     return null;
+//   }
   
-  gsap.context(() => {
-    const onChange = config.onChange;
-      let lastIndex = 0;
-      const tl = gsap.timeline({
-        repeat: config.repeat, 
-        onUpdate: onChange && function() {
-          const i = (tl as any).closestIndex(); // eslint-disable-line @typescript-eslint/no-explicit-any
-          if (lastIndex !== i) {
-            lastIndex = i;
-            onChange(items[i], i);
-          }
-        }, 
-        paused: config.paused, 
-        defaults: {ease: "none"}, 
-        onReverseComplete: () => { tl.totalTime(tl.rawTime() + tl.duration() * 100); }
-      }),
-      length = items.length,
-      startX = items[0].offsetLeft,
-      times: number[] = [],
-      widths: number[] = [],
-      spaceBefore: number[] = [],
-      xPercents: number[] = [],
-      let curIndex = 0,
-      let indexIsDirty = false,
-      center = config.center,
-      pixelsPerSecond = (config.speed || 1) * 100,
-      snap = config.snap === false ? (v: any) => v : gsap.utils.snap(config.snap || 1), // eslint-disable-line @typescript-eslint/no-explicit-any
-      timeOffset = 0,
-      container = center === true ? items[0].parentNode : gsap.utils.toArray(center)[0] || items[0].parentNode,
-      let totalWidth: number;
+//   gsap.context(() => {
+//     const onChange = config.onChange;
+//       let lastIndex = 0;
+//       const tl = gsap.timeline({
+//         repeat: config.repeat, 
+//         onUpdate: onChange && function() {
+//           const i = (tl as any).closestIndex(); // eslint-disable-line @typescript-eslint/no-explicit-any
+//           if (lastIndex !== i) {
+//             lastIndex = i;
+//             onChange(items[i], i);
+//           }
+//         }, 
+//         paused: config.paused, 
+//         defaults: {ease: "none"}, 
+//         onReverseComplete: () => { tl.totalTime(tl.rawTime() + tl.duration() * 100); }
+//       }),
+//       length = items.length,
+//       startX = items[0].offsetLeft,
+//       times: number[] = [],
+//       widths: number[] = [],
+//       spaceBefore: number[] = [],
+//       xPercents: number[] = [],
+//       let curIndex = 0,
+//       let indexIsDirty = false,
+//       center = config.center,
+//       pixelsPerSecond = (config.speed || 1) * 100,
+//       snap = config.snap === false ? (v: any) => v : gsap.utils.snap(config.snap || 1), // eslint-disable-line @typescript-eslint/no-explicit-any
+//       timeOffset = 0,
+//       container = center === true ? items[0].parentNode : gsap.utils.toArray(center)[0] || items[0].parentNode,
+//       let totalWidth: number;
 
-      const getTotalWidth = () => {
-        const scaleX = Number(gsap.getProperty(items[length-1], "scaleX")) || 1;
-        return items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + spaceBefore[0] + items[length-1].offsetWidth * scaleX + (parseFloat(config.paddingRight) || 0);
-      },
-      populateWidths = () => {
-        let b1 = container.getBoundingClientRect(), b2: any;
-        items.forEach((el: any, i: number) => {
-          const width = gsap.getProperty(el, "width", "px");
-          const x = gsap.getProperty(el, "x", "px");
-          const xPercent = gsap.getProperty(el, "xPercent");
-          widths[i] = parseFloat(String(width));
-          xPercents[i] = snap(parseFloat(String(x)) / widths[i] * 100 + Number(xPercent));
-          b2 = el.getBoundingClientRect();
-          spaceBefore[i] = b2.left - (i ? b1.right : b1.left);
-          b1 = b2;
-        });
-        gsap.set(items, {
-          xPercent: (i: number) => xPercents[i]
-        });
-        totalWidth = getTotalWidth();
-      },
-      let timeWrap: any,
-      populateOffsets = () => {
-        let timeOffset = center ? tl.duration() * (container.offsetWidth / 2) / totalWidth : 0;
-        if (center && timeWrap) {
-          times.forEach((_, i) => {
-            times[i] = timeWrap(tl.labels["label" + i] + tl.duration() * widths[i] / 2 / totalWidth - timeOffset);
-          });
-        }
-      },
-      getClosest = (values: number[], value: number, wrap: number) => {
-        let i = values.length,
-          closest = 1e10,
-          index = 0, d: number;
-        while (i--) {
-          d = Math.abs(values[i] - value);
-          if (d > wrap / 2) {
-            d = wrap - d;
-          }
-          if (d < closest) {
-            closest = d;
-            index = i;
-          }
-        }
-        return index;
-      },
-      populateTimeline = () => {
-        let i: number, item: any, curX: number, distanceToStart: number, distanceToLoop: number;
-        tl.clear();
-        for (i = 0; i < length; i++) {
-          item = items[i];
-          curX = xPercents[i] / 100 * widths[i];
-          distanceToStart = item.offsetLeft + curX - startX + spaceBefore[0];
-          const scaleX = Number(gsap.getProperty(item, "scaleX")) || 1;
-          distanceToLoop = distanceToStart + widths[i] * scaleX;
-          tl.to(item, {xPercent: snap((curX - distanceToLoop) / widths[i] * 100), duration: distanceToLoop / pixelsPerSecond}, 0)
-            .fromTo(item, {xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)}, {xPercent: xPercents[i], duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond, immediateRender: false}, distanceToLoop / pixelsPerSecond)
-            .add("label" + i, distanceToStart / pixelsPerSecond);
-          times[i] = distanceToStart / pixelsPerSecond;
-        }
-        let timeWrap = gsap.utils.wrap(0, tl.duration()); // eslint-disable-line @typescript-eslint/no-explicit-any
-      },
-      refresh = (deep?: boolean) => {
-        let progress = tl.progress();
-        tl.progress(0, true);
-        populateWidths();
-        deep && populateTimeline();
-        populateOffsets();
-        deep && (tl as any).draggable && tl.paused() ? tl.time(times[curIndex], true) : tl.progress(progress, true);
-      },
-      onResize = () => refresh(true);
+//       const getTotalWidth = () => {
+//         const scaleX = Number(gsap.getProperty(items[length-1], "scaleX")) || 1;
+//         return items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + spaceBefore[0] + items[length-1].offsetWidth * scaleX + (parseFloat(config.paddingRight) || 0);
+//       },
+//       populateWidths = () => {
+//         let b1 = container.getBoundingClientRect(), b2: any;
+//         items.forEach((el: any, i: number) => {
+//           const width = gsap.getProperty(el, "width", "px");
+//           const x = gsap.getProperty(el, "x", "px");
+//           const xPercent = gsap.getProperty(el, "xPercent");
+//           widths[i] = parseFloat(String(width));
+//           xPercents[i] = snap(parseFloat(String(x)) / widths[i] * 100 + Number(xPercent));
+//           b2 = el.getBoundingClientRect();
+//           spaceBefore[i] = b2.left - (i ? b1.right : b1.left);
+//           b1 = b2;
+//         });
+//         gsap.set(items, {
+//           xPercent: (i: number) => xPercents[i]
+//         });
+//         totalWidth = getTotalWidth();
+//       },
+//       let timeWrap: any,
+//       populateOffsets = () => {
+//         let timeOffset = center ? tl.duration() * (container.offsetWidth / 2) / totalWidth : 0;
+//         if (center && timeWrap) {
+//           times.forEach((_, i) => {
+//             times[i] = timeWrap(tl.labels["label" + i] + tl.duration() * widths[i] / 2 / totalWidth - timeOffset);
+//           });
+//         }
+//       },
+//       getClosest = (values: number[], value: number, wrap: number) => {
+//         let i = values.length,
+//           closest = 1e10,
+//           index = 0, d: number;
+//         while (i--) {
+//           d = Math.abs(values[i] - value);
+//           if (d > wrap / 2) {
+//             d = wrap - d;
+//           }
+//           if (d < closest) {
+//             closest = d;
+//             index = i;
+//           }
+//         }
+//         return index;
+//       },
+//       populateTimeline = () => {
+//         let i: number, item: any, curX: number, distanceToStart: number, distanceToLoop: number;
+//         tl.clear();
+//         for (i = 0; i < length; i++) {
+//           item = items[i];
+//           curX = xPercents[i] / 100 * widths[i];
+//           distanceToStart = item.offsetLeft + curX - startX + spaceBefore[0];
+//           const scaleX = Number(gsap.getProperty(item, "scaleX")) || 1;
+//           distanceToLoop = distanceToStart + widths[i] * scaleX;
+//           tl.to(item, {xPercent: snap((curX - distanceToLoop) / widths[i] * 100), duration: distanceToLoop / pixelsPerSecond}, 0)
+//             .fromTo(item, {xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)}, {xPercent: xPercents[i], duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond, immediateRender: false}, distanceToLoop / pixelsPerSecond)
+//             .add("label" + i, distanceToStart / pixelsPerSecond);
+//           times[i] = distanceToStart / pixelsPerSecond;
+//         }
+//         let timeWrap = gsap.utils.wrap(0, tl.duration()); // eslint-disable-line @typescript-eslint/no-explicit-any
+//       },
+//       refresh = (deep?: boolean) => {
+//         let progress = tl.progress();
+//         tl.progress(0, true);
+//         populateWidths();
+//         deep && populateTimeline();
+//         populateOffsets();
+//         deep && (tl as any).draggable && tl.paused() ? tl.time(times[curIndex], true) : tl.progress(progress, true);
+//       },
+//       onResize = () => refresh(true);
     
-    gsap.set(items, {x: 0});
-    populateWidths();
-    populateTimeline();
-    populateOffsets();
-    window.addEventListener("resize", onResize);
+//     gsap.set(items, {x: 0});
+//     populateWidths();
+//     populateTimeline();
+//     populateOffsets();
+//     window.addEventListener("resize", onResize);
     
-    function toIndex(index: number, vars: any = {}) {
-      (Math.abs(index - curIndex) > length / 2) && (index += index > curIndex ? -length : length);
-      let newIndex = gsap.utils.wrap(0, length, index),
-        time = times[newIndex];
-      if (time > tl.time() !== index > curIndex && index !== curIndex) {
-        time += tl.duration() * (index > curIndex ? 1 : -1);
-      }
-      if (time < 0 || time > tl.duration()) {
-        vars.modifiers = {time: timeWrap};
-      }
-      curIndex = newIndex;
-      vars.overwrite = true;
-      return vars.duration === 0 ? tl.time(timeWrap(time)) : tl.tweenTo(time, vars);
-    }
+//     function toIndex(index: number, vars: any = {}) {
+//       (Math.abs(index - curIndex) > length / 2) && (index += index > curIndex ? -length : length);
+//       let newIndex = gsap.utils.wrap(0, length, index),
+//         time = times[newIndex];
+//       if (time > tl.time() !== index > curIndex && index !== curIndex) {
+//         time += tl.duration() * (index > curIndex ? 1 : -1);
+//       }
+//       if (time < 0 || time > tl.duration()) {
+//         vars.modifiers = {time: timeWrap};
+//       }
+//       curIndex = newIndex;
+//       vars.overwrite = true;
+//       return vars.duration === 0 ? tl.time(timeWrap(time)) : tl.tweenTo(time, vars);
+//     }
     
-    (tl as any).toIndex = (index: number, vars?: any) => toIndex(index, vars);
-    (tl as any).closestIndex = (setCurrent?: boolean) => {
-      let index = getClosest(times, tl.time(), tl.duration());
-      if (setCurrent) {
-        curIndex = index;
-        indexIsDirty = false;
-      }
-      return index;
-    };
-    (tl as any).current = () => indexIsDirty ? (tl as any).closestIndex(true) : curIndex;
-    (tl as any).next = (vars?: any) => toIndex((tl as any).current()+1, vars);
-    (tl as any).previous = (vars?: any) => toIndex((tl as any).current()-1, vars);
-    (tl as any).times = times;
-    tl.progress(1, true).progress(0, true);
-    if (config.reversed) {
-      (tl.vars as any).onReverseComplete?.();
-      tl.reverse();
-    }
+//     (tl as any).toIndex = (index: number, vars?: any) => toIndex(index, vars);
+//     (tl as any).closestIndex = (setCurrent?: boolean) => {
+//       let index = getClosest(times, tl.time(), tl.duration());
+//       if (setCurrent) {
+//         curIndex = index;
+//         indexIsDirty = false;
+//       }
+//       return index;
+//     };
+//     (tl as any).current = () => indexIsDirty ? (tl as any).closestIndex(true) : curIndex;
+//     (tl as any).next = (vars?: any) => toIndex((tl as any).current()+1, vars);
+//     (tl as any).previous = (vars?: any) => toIndex((tl as any).current()-1, vars);
+//     (tl as any).times = times;
+//     tl.progress(1, true).progress(0, true);
+//     if (config.reversed) {
+//       (tl.vars as any).onReverseComplete?.();
+//       tl.reverse();
+//     }
     
-    (tl as any).closestIndex(true);
-    lastIndex = curIndex;
-    onChange && onChange(items[curIndex], curIndex);
-    timeline = tl;
+//     (tl as any).closestIndex(true);
+//     lastIndex = curIndex;
+//     onChange && onChange(items[curIndex], curIndex);
+//     timeline = tl;
     
-    // Return cleanup function
-    return () => window.removeEventListener("resize", onResize);
-  });
+//     // Return cleanup function
+//     return () => window.removeEventListener("resize", onResize);
+//   });
   
-  return timeline;
-}
+//   return timeline;
+// }
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false)
-  const [currentSpeaker, setCurrentSpeaker] = useState(0)
+  const [, setCurrentSpeaker] = useState(0)
   const [breakpoint, setBreakpoint] = useState<'sm' | 'md' | 'lg'>('lg')
 
   // Mock data based on spring25 structure
@@ -217,30 +217,30 @@ export default function HomePage() {
       try {
         // Initialize horizontal loop for banner
         const bannerItems = gsap.utils.toArray('.banner-item')
-        const bannerLoop = bannerItems.length > 0 ? horizontalLoop(bannerItems, {
-          paused: false,
-          speed: 0.5,
-          repeat: -1
-        }) : null
+        // const bannerLoop = bannerItems.length > 0 ? horizontalLoop(bannerItems, {
+        //   paused: false,
+        //   speed: 0.5,
+        //   repeat: -1
+        // }) : null
 
         // Initialize scrolling HackKentucky hero text
         const heroScrollItems = gsap.utils.toArray('.hero-scroll-item')
-        const heroLoop = heroScrollItems.length > 0 ? horizontalLoop(heroScrollItems, {
-          paused: false,
-          speed: 0.3,
-          repeat: -1
-        }) : null
+        // const heroLoop = heroScrollItems.length > 0 ? horizontalLoop(heroScrollItems, {
+        //   paused: false,
+        //   speed: 0.3,
+        //   repeat: -1
+        // }) : null
 
         // Initialize scrolling sponsors
         const sponsorItems = gsap.utils.toArray('.sponsor-item')
-        const sponsorLoop = sponsorItems.length > 0 ? horizontalLoop(sponsorItems, {
-          paused: false,
-          speed: 0.4,
-          repeat: -1
-        }) : null
+        // const sponsorLoop = sponsorItems.length > 0 ? horizontalLoop(sponsorItems, {
+        //   paused: false,
+        //   speed: 0.4,
+        //   repeat: -1
+        // }) : null
 
         // Fallback simple animations if horizontalLoop fails
-        if (!bannerLoop && bannerItems.length > 0) {
+        if (bannerItems.length > 0) {
           gsap.to('.banner-item', {
             x: '-100%',
             duration: 20,
@@ -249,7 +249,7 @@ export default function HomePage() {
           })
         }
 
-        if (!heroLoop && heroScrollItems.length > 0) {
+        if (heroScrollItems.length > 0) {
           gsap.to('.hero-scroll-item', {
             x: '-100%',
             duration: 30,
@@ -258,7 +258,7 @@ export default function HomePage() {
           })
         }
 
-        if (!sponsorLoop && sponsorItems.length > 0) {
+        if (sponsorItems.length > 0) {
           gsap.to('.sponsor-item', {
             x: '-100%',
             duration: 25,
@@ -268,7 +268,7 @@ export default function HomePage() {
         }
 
         // Store loops for cleanup
-        ;(window as any).hackKentuckyLoops = { bannerLoop, heroLoop, sponsorLoop }
+        // ;(window as any).hackKentuckyLoops = { bannerLoop, heroLoop, sponsorLoop } // eslint-disable-line @typescript-eslint/no-explicit-any
       } catch (error) {
         console.warn('GSAP horizontal loops failed to initialize:', error)
       }
@@ -276,7 +276,7 @@ export default function HomePage() {
 
     // Tech-like header text animations
     const headers = gsap.utils.toArray('.tech-header')
-    headers.forEach((header: any) => {
+    headers.forEach((header: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
       ScrollTrigger.create({
         trigger: header,
         start: "top 80%",
@@ -317,13 +317,13 @@ export default function HomePage() {
       window.removeEventListener('resize', updateBreakpoint)
       
       // Clean up loops if they exist
-      const loops = (window as any).hackKentuckyLoops
-      if (loops) {
-        loops.bannerLoop && loops.bannerLoop.kill()
-        loops.heroLoop && loops.heroLoop.kill()
-        loops.sponsorLoop && loops.sponsorLoop.kill()
-        delete (window as any).hackKentuckyLoops
-      }
+      // const loops = (window as any).hackKentuckyLoops // eslint-disable-line @typescript-eslint/no-explicit-any
+      // if (loops) {
+      //   loops.bannerLoop && loops.bannerLoop.kill()
+      //   loops.heroLoop && loops.heroLoop.kill()
+      //   loops.sponsorLoop && loops.sponsorLoop.kill()
+      //   delete (window as any).hackKentuckyLoops
+      // }
     }
   }, [])
 
