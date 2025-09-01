@@ -12,7 +12,7 @@ interface SceneNode {
 }
 
 // Create a static hash for caching
-const TILES_HASH = "a1b23c76723dddy6";
+const TILES_HASH = "a1b23c76723d2dy6";
 
 const Tiles = memo(({ className }: { className?: string }) => {
   // Use a static URL with hash for proper caching
