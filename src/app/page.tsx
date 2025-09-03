@@ -345,7 +345,7 @@ export default function HomePage() {
                 <Tiles />
               )}
               {breakpoint === 'sm' ? (
-                <Link href="https://lu.ma/2sbx2imc" target="_blank">
+                <Link href="https://luma.com/hackkentucky" target="_blank">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[30vh] z-10" style={{ 
                       clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))',
                       fontFamily: 'bc-novatica-cyr', 
@@ -353,7 +353,7 @@ export default function HomePage() {
                     }}>Register Now</Button>
               </Link>
               ) : (
-                <Link href="https://lu.ma/2sbx2imc" target="_blank">
+                <Link href="https://luma.com/hackkentucky" target="_blank">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white border-none absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[20vh] z-10" style={{ 
                       clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))',
                       fontFamily: 'bc-novatica-cyr', 
