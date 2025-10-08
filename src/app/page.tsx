@@ -6,6 +6,7 @@ import { SiteNavigation } from "@/components/site-navigation"
 import Tiles from "@/components/tiles"
 import TilesSM from "@/components/tilessm"
 import { useState, useEffect } from "react"
+import Sparkle from "@/components/sparkle"
 
 const CUT_CORNER = "polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px))"
 
@@ -185,10 +186,10 @@ export default function HomePage() {
             </div>
       <main className="relative mx-auto flex max-w-6xl flex-col gap-24 px-6 pb-24 pt-12 md:px-10 lg:px-0">
         <HeroSection />
-        <ProgramSection />
-        <ScheduleSection />
-        <TestimonialsSection />
-        <SponsorsSection />
+        {/* <ProgramSection /> */}
+        {/* <ScheduleSection /> */}
+        {/* <TestimonialsSection /> */}
+        {/* <SponsorsSection /> */}
         <FinalCallout />
       </main>
     </div>
@@ -246,12 +247,9 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="order-1 hidden min-h-[260px] items-center justify-center bg-[#050505]/95 p-6 sm:flex sm:col-span-3 lg:col-span-3">
-          <div className="relative flex h-48 w-48 items-center justify-center rounded-[26px] border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-white/5">
-            <div className="absolute -inset-6 rounded-[32px] border border-white/5" />
-            <div className="h-32 w-32 rounded-full border border-white/20 bg-gradient-to-br from-white/60 via-white/10 to-transparent shadow-[0_0_60px_rgba(255,255,255,0.25)]" />
-            <div className="absolute right-5 top-5 h-3 w-3 rounded-full bg-orange-400" />
-            <div className="absolute bottom-5 left-5 h-3 w-3 rounded-full bg-white/40" />
+        <div className="order-1 hidden items-center justify-center bg-[#050505]/95 p-6 sm:flex sm:col-span-3 lg:col-span-3">
+          <div className="aspect-square w-full max-w-md">
+            <Sparkle/>
           </div>
         </div>
 
@@ -442,9 +440,6 @@ function FinalCallout() {
         <h2 className="max-w-4xl text-3xl uppercase tracking-[0.1em] font-semibold text-white md:text-5xl">
           Secure your spot on the HackKentucky floor
         </h2>
-        <p className="max-w-xl text-sm text-zinc-400">
-          Applications are reviewed weekly. Teams accepted now receive pre-event programming, partner perks, and early mentor access.
-        </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="https://luma.com/hackkentucky" target="_blank" rel="noreferrer">
             <Button
@@ -459,7 +454,7 @@ function FinalCallout() {
             className="flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-zinc-400 transition hover:text-white"
           >
             Talk to the organizers
-            <span className="text-lg">↗</span>
+            <span className="text-xs">↗</span>
           </Link>
         </div>
       </div>
