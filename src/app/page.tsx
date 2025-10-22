@@ -138,6 +138,7 @@ const gridPattern = {
 }
 
 export default function HomePage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [mounted, setMounted] = useState(false)
   const [breakpoint, setBreakpoint] = useState<'sm' | 'md' | 'lg'>('lg')
 
@@ -196,6 +197,7 @@ export default function HomePage() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function HeroSection() {
   return (
     <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#090909]/80">
@@ -287,6 +289,7 @@ function HeroSection() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function ProgramSection() {
   return (
     <section id="programs" className="flex flex-col gap-8">
@@ -335,6 +338,7 @@ function ProgramSection() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function ScheduleSection() {
   return (
     <section className="flex flex-col gap-8">
@@ -365,6 +369,7 @@ function ScheduleSection() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function TestimonialsSection() {
   return (
     <section className="flex flex-col gap-8">
@@ -404,6 +409,7 @@ function TestimonialsSection() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function SponsorsSection() {
   return (
     <section className="flex flex-col gap-6">
