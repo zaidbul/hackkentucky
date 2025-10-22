@@ -6,7 +6,7 @@ import { SiteNavigation } from "@/components/site-navigation"
 import Tiles from "@/components/tiles"
 import TilesSM from "@/components/tilessm"
 import { useState, useEffect } from "react"
-import Sparkle from "@/components/sparkle"
+// import Sparkle from "@/components/sparkle"
 
 const CUT_CORNER = "polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px))"
 
@@ -185,7 +185,7 @@ export default function HomePage() {
               )}
             </div>
       <main className="relative mx-auto flex max-w-6xl flex-col gap-24 px-6 pb-24 pt-12 md:px-10 lg:px-0">
-        <HeroSection />
+        {/* <HeroSection /> */}
         {/* <ProgramSection /> */}
         {/* <ScheduleSection /> */}
         {/* <TestimonialsSection /> */}
@@ -249,7 +249,7 @@ function HeroSection() {
 
         <div className="order-1 hidden items-center justify-center bg-[#050505]/95 p-6 sm:flex sm:col-span-3 lg:col-span-3">
           <div className="aspect-square w-full max-w-md">
-            <Sparkle/>
+            {/* <Sparkle/> */}
           </div>
         </div>
 
